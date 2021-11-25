@@ -107,7 +107,7 @@ const Navbar = () => {
                                         </div>
                                         <ul className="navbar-nav ml-auto">
                                             <li className="nav-item active">
-                                                <NavLink className="nav-link" to="/CoinDetail">Add Coin <span className="sr-only">(current)</span></NavLink>
+                                                <NavLink className="nav-link" to="/AddCoin">Add Coin <span className="sr-only">(current)</span></NavLink>
                                             </li>
                                             <li className="nav-item">
                                                 <a className="nav-link" href="#">ADD NFT</a>
