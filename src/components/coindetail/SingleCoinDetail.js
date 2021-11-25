@@ -5,20 +5,10 @@ import { useSelector } from 'react-redux'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import pic from '../../Assets/our-team-background.png'
 import { useState } from 'react';
-function CoinDetail() {
+function SingleCoinDetail() {
     const lightMode = useSelector((state) => state.themereducer.lightMode)
     return (
         <>
-            <div className={lightMode ? "" : "light"}>
-                <div className="container-fluid p-0">
-                    <div className="row">
-                        <div className="col-sm-11 m-auto">
-                            <div className="home-upper-line">
-                                <h3>Home / <span>Login</span></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <section className="AddCoin">
                     <div className="container-fluid p-0">
                         <div className="row pt-0">
@@ -104,7 +94,7 @@ function CoinDetail() {
                                                        <h6>Coin links</h6>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <div className="row p-md-0">
 
                                                     <div className="col-6 p-md-0">
@@ -222,9 +212,10 @@ function CoinDetail() {
                         </div>
                     </div >
                 </section >
-            </div >
+            
         </>
+        
     )
 }
 
-export default CoinDetail
+export default SingleCoinDetail

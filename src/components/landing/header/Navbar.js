@@ -110,7 +110,7 @@ const Navbar = () => {
                                                 <NavLink className="nav-link" to="/AddCoin">Add Coin <span className="sr-only">(current)</span></NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#">ADD NFT</a>
+                                                <NavLink className="nav-link" to="AddNft">ADD NFT</NavLink>
                                             </li>
                                             <li className="nav-item">
                                                 <Link className="nav-link" to="/Nftswap">PROMOTE</Link>

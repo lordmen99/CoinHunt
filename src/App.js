@@ -11,13 +11,15 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useWeb3React } from '@web3-react/core';
 import useEagerConnect from './hooks/useEagerConnect';
 import HomeLogin from './components/homelogin/HomeLogin';
-import CoinDetail from './components/coindetail/CoinDetail';
-import NFTDetail from './components/nftdetail/NFTDetail';
+import SingleCoinDetail from './components/coindetail/SingleCoinDetail';
+import NFTDetail from './components/nftdetail/AddNft';
 import Profile from './components/Profile/Profile';
 import NFt from './components/CoinNFTTable/Nft';
 import Coins from './components/CoinNFTTable/Coin';
 import BitHighNFT from './components/BitHigh/BitHighNFT';
 import AddCoin from './components/coindetail/AddCoin';
+import AddNft from './components/nftdetail/AddNft';
+import SingleNft from './components/nftdetail/SingleNft';
 
 function App() {
   useEagerConnect();
@@ -30,9 +32,10 @@ function App() {
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/Login' component={HomeLogin} />
-            <Route exact path='/SingleCoinDetail' component={CoinDetail} />
+            <Route exact path='/SingleCoinDetail' component={SingleCoinDetail} />
             <Route exact path='/AddCoin' component={AddCoin} />
-            <Route exact path='/NFTDetail' component={NFTDetail} />
+            <Route exact path='/AddNft' component={AddNft} />
+            <Route exact path='/SingleNft' component={SingleNft} />
             <Route exact path='/Profile' component={Profile} />
             <Route exact path='/AllNFTDetail' component={NFt} />
             <Route exact path='/AllCoinDetail' component={Coins} />
