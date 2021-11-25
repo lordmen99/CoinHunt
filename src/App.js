@@ -18,6 +18,7 @@ import NFt from './components/CoinNFTTable/Nft';
 import Coins from './components/CoinNFTTable/Coin';
 import BitHighNFT from './components/BitHigh/BitHighNFT';
 import AddCoin from './components/coindetail/AddCoin';
+import BitHighCoin from './components/BitHigh/BitHighCoin';
 
 function App() {
   useEagerConnect();
@@ -37,6 +38,7 @@ function App() {
             <Route exact path='/AllNFTDetail' component={NFt} />
             <Route exact path='/AllCoinDetail' component={Coins} />
             <Route exact path='/BitNFT' component={BitHighNFT} />
+            <Route exact path='/BitCoin' component={BitHighCoin} />
           </Switch>
           <Footer />
         </Router>
