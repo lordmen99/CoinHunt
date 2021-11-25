@@ -77,7 +77,7 @@ const BitHighCoin = () => {
                                                 <div className="right-side-nft">
                                                     <div className="upper-dks">
                                                         <div className="left-name">
-                                                            <h3>BscMomsNFT</h3>
+                                                            <h3>BitHigh</h3>
                                                         </div>
                                                         <div className="right-namekcm">
                                                             <button className="bvhjr">
