@@ -325,7 +325,7 @@ const AddCoin = () => {
 
                                                         <div class="form-group main-text-feild-head">
                                                             {/* <label For="name">Listing requirement</label> */}
-                                                            <ul>
+                                                            <ul className='pr-md-0 pl-3'>
                                                                 <li>Valid contract adress</li>
                                                                 <li>Working website where we can check </li>
                                                                 <li>Locked liquidity</li>
@@ -335,7 +335,7 @@ const AddCoin = () => {
 
                                                     </div>
                                                     <div className="col-md-6 pl-md-0">
-                                                        <div class=" mt-5 w-100">
+                                                        <div class=" mt-4 w-100">
                                                             <button className="btn-haed w-100">Submit</button>
                                                         </div>
                                                     </div>

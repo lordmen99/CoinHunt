@@ -24,15 +24,6 @@ const SingleNft = () => {
     return (
         <>
             <div className={lightMode ? "" : "light"}>
-                <div className="container-fluid p-0">
-                    <div className="row">
-                        <div className="col-sm-11 m-auto">
-                            <div className="home-upper-line">
-                                <h3>Home / <span>Login</span></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <section className="AddNft">
                     <div className="container-fluid p-0">
                         <div className="row pt-0">
@@ -52,19 +43,19 @@ const SingleNft = () => {
                                                 <div className="row p-md-0">
                                                     <div className="col-6 pl-md-0">
                                                         <div class="form-group main-text-feild-head">
-                                                            <label For="name">Title</label>
+                                                            <label For="name">Title<i className="text-danger">*</i></label>
                                                             <p>BscMomsNFT</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-6 pr-md-0">
                                                         <div class="form-group main-text-feild-head">
-                                                            <label For="name">Mint / Floor Price</label>
+                                                            <label For="name">Mint / Floor Price<i className="text-danger">*</i></label>
                                                             <p>$1.009</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-6 pl-md-0 mt-4">
                                                         <div class="form-group main-text-feild-head">
-                                                            <label For="name">Chain</label>
+                                                            <label For="name">Chain<i className="text-danger">*</i></label>
                                                             <p>Solana</p>
                                                         </div>
                                                     </div>
@@ -74,15 +65,15 @@ const SingleNft = () => {
                                                             <p>http//rc-2token.cc/</p>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 pl-md-0 mb-4 mt-4">
+                                                    <div className="col-12 pl-md-0 mb-4 mt-5">
                                                         <div class='form-group'>
-                                                            <label For='name'>Image</label>
+                                                            <label For='name'>Image<i className="text-danger">*</i></label>
                                                             <div className='upload-div'>
                                                                 <img src={pic} alt="" className="img-fluid  imoo" />
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-md-6 pl-md-0">
+                                                    <div className="col-md-6 pb-4 pl-md-0">
                                                         <div class='form-group main-text-feild-head'>
                                                             <label For='name'>Launch date</label>
                                                             <p>20/12/21 12:34:00</p>
@@ -139,20 +130,21 @@ const SingleNft = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="col-md-6 pl-md-0">
-                                                        <div className="row">
-                                                            <div className="col-md-6 pl-md-0">
-                                                                <div class=" mt-5 w-100">
-                                                                    <button className="btn-haed w-100">Submit</button>
+                                                    <div className="col-md-6 p-0">
+                                                        <div className="AddNft-forms AddNft-forms1">
+                                                            <div className="row p-0">
+                                                                <div className="col-md-6 pl-md-0 pr-md-2">
+                                                                    <div class=" w-100">
+                                                                        <button className="btn-haed w-100">Approve</button>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div className="col-md-6 pr-md-0">
-                                                                <div class=" mt-5 w-100">
-                                                                    <button className="btn-haed-disconnect w-100">Submit</button>
+                                                                <div className="col-md-6 pr-md-0 mt-md-0 mt-3 pl-md-2">
+                                                                    <div class=" w-100">
+                                                                        <button className="btn-haed-disconnect w-100">Reject</button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
