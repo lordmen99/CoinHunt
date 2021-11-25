@@ -1,0 +1,103 @@
+.AllNFT{
+    
+    .down-nfts{
+        .sndsj{
+           
+        }
+        .table td{
+            border-top: none;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .table thead th{
+            border-top: 2px solid #2F3955;
+            border-bottom: 2px solid #2F3955;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            white-space: nowrap;
+        }
+            .images-outer{
+                img{
+                    width: 44px;
+                    height: 44px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }  
+                display: flex;
+                align-items: center;
+                .textss{
+                    margin-left: 16px;
+                    h4{
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 33px;
+                        color: #FFFFFF;
+                    }
+                    p{
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px!important;
+                        line-height: 24px;
+                        color: #A5B0CE;
+                    }
+                }
+                .preslae{
+                    margin-top: -24px;
+                    margin-left: 16px;
+                    padding: 5px 10px;
+                    background: #4F46E5;
+                    border-radius: 11px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #FFFFFF;
+                }
+                
+            }
+            .cnc{
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 50px;
+                color: #4F46E5;
+                border: none;
+                text-decoration: underline!important;
+            }
+            .jhj{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 50px;
+                color: #A5B0CE;
+            }
+            .jhjf{
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 50px;
+                color: #3BB54A;
+            }
+            .bvhjr{
+                background: #4F46E5;
+                border-radius: 14px;
+                height: 55px;
+                width: 126px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                border: none;
+                color: #fff;
+                outline: none;
+                box-shadow: none;
+            }
+    }
+}
+

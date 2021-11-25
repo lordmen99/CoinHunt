@@ -42,7 +42,7 @@ const CoinDetail = () => {
                                 </div>
                                 <div className="CoinDetail-forms">
                                     <div className="row p-0">
-                                        <div className="col-md-7 p-0 mr-auto">
+                                        <div className="col-md-8 p-0 mr-auto">
                                             <ValidatorForm className="form-contact">
                                                 <div className="row p-md-0">
                                                     <div className="col-md-6 p-md-0">
@@ -100,11 +100,11 @@ const CoinDetail = () => {
                                                             />
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 pl-md-0">
+                                                    <div className="col-12 pl-md-0 mb-4">
                                                         <div class='form-group'>
                                                             <label For='name'>Upload Logo (500X500 pixels)</label>
                                                             <div className='upload-div'>
-                                                                <label className='upload-btn' for='files'>oooo</label>
+                                                                <label className='upload-btn' for='files'><img src="\coinhunt\Web - Light\cloud-image.svg" alt="" className="img-fluid" /></label>
                                                                 {uploadImage && (
                                                                     // <img src={fileUrl} style={{ margin: 0 }} width="300px" height="300px" />
                                                                     <img src={uploadImage} alt="" className="img-fluid imoo" />
@@ -196,7 +196,7 @@ const CoinDetail = () => {
                                 </div>
                                 <div className="CoinDetail-forms">
                                     <div className="row p-0">
-                                        <div className="col-md-7 p-0 mr-auto">
+                                        <div className="col-md-8 p-0 mr-auto">
                                             <ValidatorForm className="form-contact">
                                                 <h6>Coin links</h6>
                                                 <div className="row p-md-0">
@@ -262,14 +262,11 @@ const CoinDetail = () => {
                                 </div>
                                 <div className="CoinDetail-forms">
                                     <div className="row p-0">
-                                        <div className="col-md-7 p-0 mr-auto">
+                                        <div className="col-md-8 p-0 mr-auto">
                                             <ValidatorForm className="form-contact">
                                                 <h6>Coin contracts</h6>
                                                 <div className="row p-md-0">
-
                                                     <div className="col-md-6 p-md-0">
-
-
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Binance Smart Chain</label>
                                                             <TextValidator fullWidth type='text'

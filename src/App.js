@@ -16,6 +16,7 @@ import NFTDetail from './components/nftdetail/NFTDetail';
 import Profile from './components/Profile/Profile';
 import NFt from './components/CoinNFTTable/Nft';
 import Coins from './components/CoinNFTTable/Coin';
+import BitHighNFT from './components/BitHigh/BitHighNFT';
 
 function App() {
   useEagerConnect();
@@ -28,11 +29,12 @@ function App() {
           <Switch>
             <Route exact path='/' component={Landing} />
             <Route exact path='/Login' component={HomeLogin} />
-            <Route exact path='/CoinDetail' component={CoinDetail} />
-            <Route exact path='/NFTDetail' component={NFTDetail} />
+            <Route exact path='/AddCoin' component={CoinDetail} />
+            <Route exact path='/AddNFT' component={NFTDetail} />
             <Route exact path='/Profile' component={Profile} />
-            <Route exact path='/NFTDetail' component={NFt} />
-            <Route exact path='/CoinDetail' component={Coins} />
+            <Route exact path='/AllNFTDetail' component={NFt} />
+            <Route exact path='/AllCoinDetail' component={Coins} />
+            <Route exact path='/BitNFT' component={BitHighNFT} />
           </Switch>
           <Footer />
         </Router>
