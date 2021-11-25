@@ -7,7 +7,8 @@ const Footer = () => {
         <>
             <div className={lightMode ? "" : "light"}>
                 <section className="main-footer">
-                    <div className="container-fluid p-0">
+                    <div className="container-fluid">
+                        <div className=""></div>
                         <div className="col-sm-11 m-auto">
                             <div className="row">
                                 <div className="col-lg-6 p-md-0">

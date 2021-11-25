@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './promotedcoin.scss';
+import './tables.scss';
 import { useSelector } from 'react-redux'
-const PromotedCoin = () => {
+const  Coins = () => {
     const lightMode = useSelector((state) => state.themereducer.lightMode)
     return (
         <>
@@ -192,4 +192,4 @@ const PromotedCoin = () => {
     )
 }
 
-export default PromotedCoin;
+export default Coins;

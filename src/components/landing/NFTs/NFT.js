@@ -170,6 +170,7 @@ const NFts = () => {
                         </div>
                     </div>
                 </section>
+            
             </div>
         </>
     )

@@ -14,6 +14,8 @@ import HomeLogin from './components/homelogin/HomeLogin';
 import CoinDetail from './components/coindetail/CoinDetail';
 import NFTDetail from './components/nftdetail/NFTDetail';
 import Profile from './components/Profile/Profile';
+import NFt from './components/CoinNFTTable/Nft';
+import Coins from './components/CoinNFTTable/Coin';
 
 function App() {
   useEagerConnect();
@@ -29,6 +31,8 @@ function App() {
             <Route exact path='/CoinDetail' component={CoinDetail} />
             <Route exact path='/NFTDetail' component={NFTDetail} />
             <Route exact path='/Profile' component={Profile} />
+            <Route exact path='/NFTDetail' component={NFt} />
+            <Route exact path='/CoinDetail' component={Coins} />
           </Switch>
           <Footer />
         </Router>
