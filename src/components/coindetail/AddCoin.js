@@ -108,7 +108,6 @@ const AddCoin = () => {
                                                                     <img src={uploadImage} alt="" className="img-fluid  imoo" />
                                                                 )}
                                                             </div>
-
                                                             <TextValidator
                                                                 fullWidth
                                                                 type='file'

@@ -56,7 +56,7 @@ const BitHighNFT = () => {
                     <div className="row">
                         <div className="col-sm-11 m-auto">
                             <div className="home-upper-line">
-                                <h3>Home / <span>Coin</span> / <span className="cjb">BitHigh</span></h3>
+                                <h3>Home / <span>Nft</span> / <span className="cjb">BscMomsNFT</span></h3>
                             </div>
                         </div>
                     </div>
@@ -70,10 +70,10 @@ const BitHighNFT = () => {
                                         <div className="row">
                                             <div className="col-lg-5 col-12 pl-md-0">
                                                 <div className="main-bithigh-image">
-                                                    <img src="\coinhunt\Web - Light\21668.png" alt="" className="img-fluid" />
+                                                    <img src="\coinhunt\Web - Light\2166888.png" alt="" className="img-fluid" />
                                                 </div>
                                             </div>
-                                            <div className="col-lg-7 col-12 pl-md-0">
+                                            <div className="col-lg-7 col-12 pr-md-0">
                                                 <div className="right-side-nft">
                                                     <div className="upper-dks">
                                                         <div className="left-name">
@@ -85,6 +85,33 @@ const BitHighNFT = () => {
                                                                 <p>21667</p>
                                                             </button>
                                                         </div>
+                                                    </div>
+                                                    <div className="linksss">
+                                                        <div className="left-divs">
+                                                            <h5>Website</h5>
+                                                            <p>http://bscfamilynft.com/</p>
+                                                        </div>
+                                                        <div className="right-divs">
+                                                            <Link><img src="\coinhunt\Web - Light\Frame 275.svg" alt="" className="img-fluid" /></Link>
+                                                            <Link><img src="\coinhunt\Web - Light\Frame 276.svg" alt="" className="img-fluid" /></Link>
+                                                            <Link><img src="\coinhunt\Web - Light\Frame 277.svg" alt="" className="img-fluid" /></Link>
+                                                        </div>
+                                                    </div>
+                                                    <div className="kjasbcijw">
+                                                        <div className="jshvcd">
+                                                            <h5>Market Cap</h5>
+                                                            <p>0.08 BNB</p>
+                                                        </div>
+                                                        <div className="jshvc">
+                                                            <h5>Launch Date</h5>
+                                                            <p>1d 9h 16m 40s</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="ajsbsjkc">
+                                                        <p className="mt-4">What are we?<br></br>
+                                                            The family is made up of BscMoms, BscDads & BscKids.<br></br>
+                                                            Moms will be the first drop of the BscFamily.</p>
+                                                        <p className="mt-4">BscMoms is a collection of 10000 unique Moms that are members of the BscFamily living on the BSC blockchain.<br></br> Each Mom is uniquely generated with traits assigned at mint.</p>
                                                     </div>
                                                 </div>
                                             </div>
