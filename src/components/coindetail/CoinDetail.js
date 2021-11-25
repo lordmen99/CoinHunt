@@ -1,24 +1,11 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
 import './coindetail.scss';
 import { useSelector } from 'react-redux'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import pic from '../../Assets/our-team-background.png'
 import { useState } from 'react';
-
-const CoinDetail = () => {
-    const [photo, setPhoto] = useState();
-    const [uploadImage, updateuploadImage] = useState("");
-    async function catchImage(e) {
-        try {
-            const file = e.target.files[0]
-            setPhoto(e.target.files[0])
-            updateuploadImage(URL.createObjectURL(e.target.files[0]));
-            console.log(file, "file")
-        } catch (e) {
-            console.log(e)
-        }
-    }
+function CoinDetail() {
     const lightMode = useSelector((state) => state.themereducer.lightMode)
     return (
         <>
@@ -32,161 +19,75 @@ const CoinDetail = () => {
                         </div>
                     </div>
                 </div>
-                <section className="CoinDetail">
+                <section className="AddCoin">
                     <div className="container-fluid p-0">
                         <div className="row pt-0">
                             <div className="col-11 m-auto pt-0">
-                                <div className="CoinDetail-headings">
-                                    <h2>Coin listing request</h2>
-                                    <h5>Coin Informations</h5>
+                            <div className="row p-md-0">
+                                    <div className="col-12 p-md-0">
+                                        <div className="AddCoin-headings">
+                                            <h2 className="">Coin listing request</h2>
+                                            <h5>Coin Informations</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="CoinDetail-forms">
+                                <div className="AddCoin-forms">
                                     <div className="row p-0">
                                         <div className="col-md-7 p-0 mr-auto">
                                             <ValidatorForm className="form-contact">
                                                 <div className="row p-md-0">
-                                                    <div className="col-md-6 p-md-0">
+                                                    <div className="col-6 p-md-0">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Name</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Ex : Bitcoin'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p>Bitcoin</p>
                                                         </div>
                                                     </div>
-                                                    <div className="col-md-6">
+                                                    <div className="col-6">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Symbol</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Enter Title Name'
-                                                                className='Ex : BTC'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p>$BTC</p>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 pl-md-0">
-                                                        <div class='form-group'>
-                                                            <label For='name'>Description</label>
-                                                            <TextValidator
-                                                                fullWidth
-                                                                type='text'
-                                                                name='descriptionn'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.descriptionn}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                multiLine
-                                                                rows={3}
-                                                                placeholder='What is your Description about?'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                    <div className="AddCoin-forms AddCoin-forms3">
+                                                        <div className="col-12 pl-md-0">
+                                                            <div class='form-group main-text-feild-head2'>
+                                                                <label For='name'>Description</label>
+                                                                <p>Alpaca Finance is a lending protocol allowing leveraged yield farming on Binance Smart Chain. Borrowed
+                                                                    assets on Alpaca Finance have to be used within its platform for leveraged yield farming. ALPACA is the
+                                                                    native token of the platform and is used for performance fee sharing, earning rewards, network governance
+                                                                    and exclusive NFT access. </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div className="col-12 pl-md-0">
                                                         <div class='form-group'>
                                                             <label For='name'>Upload Logo (500X500 pixels)</label>
-                                                            <div className='upload-div'>
-                                                                <label className='upload-btn' for='files'>oooo</label>
-                                                                {uploadImage && (
-                                                                    // <img src={fileUrl} style={{ margin: 0 }} width="300px" height="300px" />
-                                                                    <img src={uploadImage} alt="" className="img-fluid imoo" />
-                                                                )}
+                                                            <div className='upload-div upload-div2'>
+                                                                <img src={pic} alt="" className="img-fluid imoo" />
                                                             </div>
-
-                                                            <TextValidator
-                                                                fullWidth
-                                                                type='file'
-                                                                name='descriptionn'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.descriptionn}
-                                                                // onChange={handleChange}
-                                                                onChange={catchImage}
-                                                                variant='outlined'
-                                                                multiLine
-                                                                rows={3}
-                                                                placeholder='Enter Description'
-                                                                className='input-fields d-none'
-                                                                id='files'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
                                                         </div>
                                                     </div>
-                                                    <div className="col-md-6 p-md-0">
+                                                    <div className="col-6 p-md-0">
 
 
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Price</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Ex : $0.005'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p>$2000</p>
                                                         </div>
 
                                                     </div>
-                                                    <div className="col-md-6">
+                                                    <div className="col-6">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Market cap</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Ex : $51002'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p>$2,000,000</p>
                                                         </div>
                                                     </div>
-                                                    <div className="col-12 pl-md-0">
-                                                        <div class='form-group'>
-                                                            <label For='name'>Launch date</label>
-                                                            <TextValidator
-                                                                fullWidth
-                                                                type='date'
-                                                                name='descriptionn'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.descriptionn}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                multiLine
-                                                                rows={3}
-                                                                placeholder='mm/dd/yyyy --:-- --'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                    <div className="AddCoin-forms AddCoin-forms1">
+                                                        <div className="col-12 pl-md-0">
+                                                            <div class='form-group main-text-feild-head'>
+                                                                <label For='name'>Launch date</label>
+                                                                <p>20/12/21 12:34:00</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -194,65 +95,37 @@ const CoinDetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="CoinDetail-forms">
+                                <div className="AddCoin-forms">
                                     <div className="row p-0">
                                         <div className="col-md-7 p-0 mr-auto">
                                             <ValidatorForm className="form-contact">
-                                                <h6>Coin links</h6>
+                                            <div className="row p-md-0">
+                                                    <div className="col-12 p-md-0">
+                                                       <h6>Coin links</h6>
+                                                    </div>
+                                                </div>
+                                                
                                                 <div className="row p-md-0">
 
-                                                    <div className="col-md-6 p-md-0">
+                                                    <div className="col-6 p-md-0">
 
 
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Website Link</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Enter website address of your project'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p>www.website.com</p>
                                                         </div>
 
                                                     </div>
-                                                    <div className="col-md-6">
+                                                    <div className="col-6">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Twitter Link</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Enter twitter link of your project'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p>www.twitter.com/coininfo</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 p-md-0">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Telegram Link</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Enter telegram link of your project'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p>tg.com/link</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -260,83 +133,43 @@ const CoinDetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="CoinDetail-forms">
+                                <div className="AddCoin-forms">
                                     <div className="row p-0">
                                         <div className="col-md-7 p-0 mr-auto">
                                             <ValidatorForm className="form-contact">
-                                                <h6>Coin contracts</h6>
+                                            <div className="row p-md-0">
+                                                    <div className="col-12 p-md-0">
+                                                        <h6>Coin contracts</h6>
+                                                    </div>
+                                                </div>
                                                 <div className="row p-md-0">
 
                                                     <div className="col-md-6 p-md-0">
 
 
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div class="form-group main-text-feild-head3">
                                                             <label For="name">Binance Smart Chain</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Ex : 0x00000000000000'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p className='text-truncate'>0x0F4Dc5c90b64437B9da458806cFb958404D6B5D8</p>
                                                         </div>
 
                                                     </div>
 
                                                     <div className="col-md-6">
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div class="form-group main-text-feild-head3">
                                                             <label For="name">Ethereum</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Ex : 0x000000000000000'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p className='text-truncate'>0x0F4Dc5c90b64437B9da458806cFb958404D6B5D8</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 p-md-0">
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div class="form-group main-text-feild-head3">
                                                             <label For="name">Polygon</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Ex : 0x000000000000000'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p className='text-truncate'>0x0F4Dc5c90b64437B9da458806cFb958404D6B5D8</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6">
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div class="form-group main-text-feild-head3">
                                                             <label For="name">Solana</label>
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.titleName}
-                                                                // onChange={handleChange}
-                                                                variant='outlined'
-                                                                placeholder='Ex : xxxxxxxxxxxxxxxxxxxxx'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                            <p className='text-truncate'>0x0F4Dc5c90b64437B9da458806cFb958404D6B5D8</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -344,7 +177,7 @@ const CoinDetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="CoinDetail-forms CoinDetail-forms1">
+                                <div className="AddCoin-forms AddCoin-forms1">
                                     <div className="row p-0">
                                         <div className="col-md-7 p-0 mr-auto">
                                             <ValidatorForm className="form-contact">
@@ -363,11 +196,24 @@ const CoinDetail = () => {
                                                         </div>
 
                                                     </div>
-                                                    <div className="col-md-6">
-                                                        <div class=" w-100">
-                                                            <button className="btn-haed w-100">Submit</button>
+                                                    {/* <div className="AddCoin-forms AddCoin-forms1"> */}
+                                                        <div className="col-md-6 p-0">
+                                                        <div className="AddCoin-forms AddCoin-forms1">
+                                                            <div className="row p-0">
+                                                                <div className="col-md-6 pl-md-0 pr-md-2">
+                                                                    <div class=" w-100">
+                                                                        <button className="btn-haed w-100">Approve</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="col-md-6 pr-md-0 mt-md-0 mt-3 pl-md-2">
+                                                                    <div class=" w-100">
+                                                                        <button className="btn-haed-disconnect w-100">Reject</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    {/* </div> */}
                                                 </div>
                                             </ValidatorForm>
                                         </div>
@@ -382,4 +228,4 @@ const CoinDetail = () => {
     )
 }
 
-export default CoinDetail;
+export default CoinDetail

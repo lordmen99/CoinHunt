@@ -1,5 +1,5 @@
-.CoinDetail {
-    .CoinDetail-headings {
+.AddCoin {
+    .AddCoin-headings {
         h2 {
             color: #ffffff;
             font-weight: 600;
@@ -8,7 +8,7 @@
             margin-top: 30px;
             margin-bottom: 50px;
         }
-        h5{
+        h5 {
             color: #ffffff;
             font-weight: 600;
             font-size: 28px;
@@ -16,10 +16,38 @@
             margin-bottom: 0px;
         }
     }
-    .CoinDetail-forms {
+    .AddCoin-forms {
         border-bottom: 1px solid #2f3955;
         padding-top: 65px;
         padding-bottom: 65px;
+        .main-text-feild-head {
+            p {
+                font-size: 20px;
+                line-height: 15px;
+
+                color: #a5b0ce;
+            }
+        }
+        .main-text-feild-head2 {
+            p {
+                font-size: 20px;
+                line-height: 28px;
+                text-align: justify;
+                text-justify: inter-word;
+
+                color: #a5b0ce;
+            }
+        }
+        .main-text-feild-head3 {
+            p {
+                width: 100%;
+
+                font-size: 20px;
+                line-height: 28px;
+
+                color: #a5b0ce;
+            }
+        }
         label {
             font-weight: 500;
             font-size: 20px;
@@ -35,9 +63,25 @@
         }
         .btn-haed {
             border-radius: 14px;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 33px;
             &:hover {
                 background-color: transparent;
                 color: #4f46e5;
+            }
+        }
+        .btn-haed-disconnect {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 33px;
+            border-radius: 14px;
+            outline: none;
+            border: none;
+            &:hover {
+                background-color: transparent;
+                border: 1px solid #f74a4a;
+                color: #f74a4a;
             }
         }
         ul {
@@ -78,8 +122,36 @@
                 transform: translate(-50%, -50%);
             }
         }
+        .upload-div2 {
+            padding: 0;
+            background: transparent;
+            border: 2px dashed rgba(196, 196, 196, 0.5);
+            box-sizing: border-box;
+            border-radius: 9px;
+            overflow: hidden;
+            &:hover {
+                background-color: transparent;
+                color: none;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 9px;
+                object-fit: cover;
+            }
+            .upload-btn {
+                position: absolute;
+                left: 50%;
+                top: 46%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
-    .CoinDetail-forms1{
+    .AddCoin-forms1 {
+        border-bottom: none;
+        padding-bottom: 0px;
+    }
+    .AddCoin-forms3 {
         border-bottom: none;
     }
 }
