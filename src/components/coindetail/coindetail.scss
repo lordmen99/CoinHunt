@@ -1,0 +1,279 @@
+.AddCoin {
+    .AddCoin-headings {
+        h2 {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 28px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        h5 {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 28px;
+            margin-bottom: 0px;
+        }
+    }
+    .AddCoin-forms {
+        border-bottom: 1px solid #2f3955;
+        padding-top: 65px;
+        padding-bottom: 35px;
+        .main-text-feild-head {
+            p {
+                // font-size: 17px;
+                // line-height: 15px;
+                font-size: 20px;
+                line-height: 15px;
+                color: #a5b0ce;
+            }
+        }
+        .main-text-feild-head2 {
+            p {
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 25px;
+                text-align: justify;
+                text-justify: inter-word;
+
+                color: #a5b0ce;
+            }
+        }
+        .main-text-feild-head3 {
+            p {
+                width: 100%;
+                // font-size: 20px;
+                // line-height: 15px;
+                font-size: 20px;
+                line-height: 15px;
+
+                color: #a5b0ce;
+            }
+        }
+        label {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            // font-size: 16px;
+            // line-height: 28px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        h6 {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 28px;
+            color: #ffffff;
+            margin-bottom: 48px;
+        }
+        .btn-haed {
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 33px;
+            &:hover {
+                background-color: transparent;
+                color: #4f46e5;
+            }
+        }
+        .btn-haed-disconnect {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 33px;
+            border-radius: 14px;
+            outline: none;
+            border: none;
+            border: 1px solid #f74a4a;
+            &:hover {
+                background-color: transparent;
+                border: 1px solid #f74a4a;
+                color: #f74a4a;
+            }
+        }
+        ul {
+            list-style: unset;
+            li {
+                color: #a5b0ce;
+                // font-weight: 500;
+                // font-size: 16px;
+                // line-height: 28px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 4px;
+            }
+        }
+        .upload-div {
+            position: relative;
+            width: 236px;
+            height: 236px;
+            background: #2f3955;
+            border: 2px dashed rgba(196, 196, 196, 0.5);
+            box-sizing: border-box;
+            border-radius: 9px;
+            overflow: hidden;
+            &:hover {
+                .upload-btn {
+                    background-color: rgba(97, 97, 97, 0.562);
+                    position: absolute;
+                    left: 50%;
+                    top: 46%;
+                    margin-top: 4%;
+                    width: 100%;
+                    height: 100%;
+                    padding: 75px;
+                    transform: translate(-50%, -50%);
+                    cursor: pointer;
+                    filter: invert(100%);
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 9px;
+
+                object-fit: cover;
+            }
+            .upload-btn {
+                // background-color: red;
+                position: absolute;
+                margin-top: 4%;
+                width: 100%;
+                height: 100%;
+                padding: 75px;
+                left: 50%;
+                top: 46%;
+                z-index: 999;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+            }
+        }
+        .upload-div2 {
+            padding: 0;
+            background: transparent;
+            border: 2px dashed rgba(196, 196, 196, 0.5);
+            box-sizing: border-box;
+            border-radius: 9px;
+            overflow: hidden;
+            &:hover {
+                background-color: transparent;
+                color: none;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 9px;
+                object-fit: cover;
+            }
+            .upload-btn {
+                position: absolute;
+                left: 50%;
+                top: 46%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .AddCoin-forms-detail {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+    .AddCoin-forms1 {
+        border-bottom: none;
+        padding-bottom: 0px;
+    }
+    .AddCoin-forms3 {
+        border-bottom: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .col,
+        .col-1,
+        .col-10,
+        .col-11,
+        .col-12,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-auto,
+        .col-lg,
+        .col-lg-1,
+        .col-lg-10,
+        .col-lg-11,
+        .col-lg-12,
+        .col-lg-2,
+        .col-lg-3,
+        .col-lg-4,
+        .col-lg-5,
+        .col-lg-6,
+        .col-lg-7,
+        .col-lg-8,
+        .col-lg-9,
+        .col-lg-auto,
+        .col-md,
+        .col-md-1,
+        .col-md-10,
+        .col-md-11,
+        .col-md-12,
+        .col-md-2,
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-6,
+        .col-md-7,
+        .col-md-8,
+        .col-md-9,
+        .col-md-auto,
+        .col-sm,
+        .col-sm-1,
+        .col-sm-10,
+        .col-sm-11,
+        .col-sm-12,
+        .col-sm-2,
+        .col-sm-3,
+        .col-sm-4,
+        .col-sm-5,
+        .col-sm-6,
+        .col-sm-7,
+        .col-sm-8,
+        .col-sm-9,
+        .col-sm-auto,
+        .col-xl,
+        .col-xl-1,
+        .col-xl-10,
+        .col-xl-11,
+        .col-xl-12,
+        .col-xl-2,
+        .col-xl-3,
+        .col-xl-4,
+        .col-xl-5,
+        .col-xl-6,
+        .col-xl-7,
+        .col-xl-8,
+        .col-xl-9,
+        .col-xl-auto {
+            position: relative;
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1268px) {
+    .AddCoin .AddCoin-forms1 {
+        border-bottom: none;
+        padding-bottom: 0px;
+        width: 55vw;
+    }
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    // display: none;
+    // -webkit-appearance: none;
+    filter: invert(50%);
+}

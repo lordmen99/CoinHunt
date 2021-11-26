@@ -100,10 +100,10 @@ hr {
 }
 
 h2 {
-  font-size: 40px !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  color: #0f172a !important;
+  font-size: 40px ;
+  font-style: normal ;
+  font-weight: 700 ;
+  color: #0f172a ;
 }
 
 
@@ -259,8 +259,8 @@ h2 {
   margin-top: 80px;
   h3{
         font-style: normal;
-        font-weight: bold;
-        font-size: 28px;
+        font-weight: 500;
+        font-size: 23px;
         line-height: 42px;
         color: #FFFFFF;
         margin-bottom: 30px;
@@ -424,18 +424,49 @@ h2 {
 .common {
   color: #6c01c3;
 }
-.MuiOutlinedInput-notchedOutline {
-  border-color: #e2e8f0 !important;
-}
-.MuiInputBase-input {
-  height: 47px !important;
-  border-radius: 8px !important;
-  &::placeholder {
-    color: #7b7b7b !important;
+// .MuiOutlinedInput-notchedOutline {
+//   border-color: #e2e8f0 !important;
+// }
+// .MuiInputBase-input {
+//   height: 47px !important;
+//   border-radius: 8px !important;
+//   &::placeholder {
+//     color: #7b7b7b !important;
+//   }
+// }
+// .MuiOutlinedInput-root {
+//   border-radius: 8px !important;
+// }
+.MuiOutlinedInput-input{
+  margin-bottom: 30px!important;
+  // width: 450px !important;
+  // padding: .5px 14px;
+  height: 75px!important;
+  padding: 0px 20px!important;
+  font-family: 'poppins'!important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px!important;
+  line-height: 24px;
+  background: #2F3955 !important;
+  border-radius: 9px !important;
+  color: #A5B0CE !important;
+  border: none !important;
+  outline: none !important;
+  &::placeholder{
+      font-family: 'poppins'!important;
+      font-style: normal;
+      // font-weight: 500;
+      // font-size: 14px!important;
+      line-height: 24px;
+      font-size: 16px;
+line-height: 15px;
+      color: #A5B0CE !important;
   }
 }
-.MuiOutlinedInput-root {
-  border-radius: 8px !important;
+.MuiOutlinedInput-notchedOutline{
+  border-radius: 9px !important;
+  border: transparent !important;
 }
 .green {
   color: #6dff39;
@@ -481,6 +512,7 @@ h2 {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  
   .collectiondetail .main-card .upper-tile {
     position: unset !important;
   }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './promotedcoin.scss';
+import './tables.scss';
 import { useSelector } from 'react-redux'
-const PromotedCoin = () => {
+const NFt = () => {
     const lightMode = useSelector((state) => state.themereducer.lightMode)
     return (
         <>
@@ -11,12 +11,12 @@ const PromotedCoin = () => {
                     <div className="row">
                         <div className="col-sm-11 m-auto">
                             <div className="heading-main">
-                                <h3>Promoted Coins</h3>
+                                <h3>NFTs</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <section className="Promotedcoin">
+                <section className="AllNFT">
                     <div className="container-fluid p-0">
                         <div className="row">
                             <div className="col-sm-11 m-auto">
@@ -25,156 +25,131 @@ const PromotedCoin = () => {
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">COIN</th>
-                                                    <th scope="col">1H</th>
-                                                    <th scope="col">MARKET CAP</th>
-                                                    <th scope="col">TIME SINCE LAUNCH</th>
-                                                    <th scope="col">VOTES</th>
+                                                    <th scope="col">NFTS NAME</th>
+                                                    <th scope="col">PRICE</th>
+                                                    <th scope="col">CHAIN</th>
+                                                    <th scope="col">STATUS</th>
+                                                    <th scope="col">DETAILS</th>
                                                 </tr>
                                             </thead>
                                             <tbody className="sndsj">
                                                 <tr>
                                                     <td>
                                                         <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\image 6.svg" alt="" className="img-fluid" />
+                                                            <img src="\coinhunt\Web - Light\nft-1.svg" alt="" className="img-fluid" />
                                                             <div className="textss">
-                                                                <h4>BitHigh</h4>
-                                                                <p>BitHigh</p>
-                                                            </div>
-                                                            <div className="preslae">
-                                                                Presale
+                                                                <h4>SkullApe</h4>
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <button className="mnc">10.26%</button>
+                                                        <Link className="cnc">0.1 BNB</Link>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">$952.678</p>
+                                                        <p className="jhj">BSC</p>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">Launched Today</p>
+                                                        <p className="jhjf">APPROVED</p>
                                                     </td>
                                                     <td>
-                                                        <button className="bvhjr">
-                                                        <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
-                                                        <p>21667</p>
+                                                         <button className="bvhjr">
+                                                            Detail
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\image 6.svg" alt="" className="img-fluid" />
+                                                            <img src="\coinhunt\Web - Light\nft-2.svg" alt="" className="img-fluid" />
                                                             <div className="textss">
-                                                                <h4>BitHigh</h4>
-                                                                <p>BitHigh</p>
-                                                            </div>
-                                                            <div className="preslae">
-                                                                Presale
+                                                                <h4>Mutant</h4>
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <button className="rnc">10.26%</button>
+                                                        <Link className="cnc">0.1 BNB</Link>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">$952.678</p>
+                                                        <p className="jhj">BSC</p>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">Launched Today</p>
+                                                        <p className="jhjf">APPROVED</p>
                                                     </td>
                                                     <td>
-                                                        <button className="bvhjr">
-                                                        <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
-                                                        <p>21667</p>
+                                                         <button className="bvhjr">
+                                                            Detail
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\image 6.svg" alt="" className="img-fluid" />
+                                                            <img src="\coinhunt\Web - Light\nft-3.svg" alt="" className="img-fluid" />
                                                             <div className="textss">
-                                                                <h4>BitHigh</h4>
-                                                                <p>BitHigh</p>
-                                                            </div>
-                                                            <div className="preslae">
-                                                                Presale
+                                                                <h4>Sant</h4>
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <button className="rnc">10.26%</button>
+                                                        <Link className="cnc">0.1 BNB</Link>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">$952.678</p>
+                                                        <p className="jhj">BSC</p>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">Launched Today</p>
+                                                        <p className="jhjf">APPROVED</p>
                                                     </td>
                                                     <td>
                                                         <button className="bvhjr">
-                                                        <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
-                                                        <p>21667</p>
+                                                            Detail
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\image 6.svg" alt="" className="img-fluid" />
+                                                            <img src="\coinhunt\Web - Light\nft-4.svg" alt="" className="img-fluid" />
                                                             <div className="textss">
-                                                                <h4>BitHigh</h4>
-                                                                <p>BitHigh</p>
-                                                            </div>
-                                                            <div className="preslae">
-                                                                Presale
+                                                                <h4>Royal Horse</h4>
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <button className="rnc">10.26%</button>
+                                                        <Link className="cnc">0.1 BNB</Link>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">$952.678</p>
+                                                        <p className="jhj">BSC</p>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">Launched Today</p>
+                                                        <p className="jhjf">APPROVED</p>
                                                     </td>
                                                     <td>
-                                                        <button className="bvhjr">
-                                                        <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
-                                                        <p>21667</p>
+                                                         <button className="bvhjr">
+                                                            Detail
                                                         </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\image 6.svg" alt="" className="img-fluid" />
+                                                            <img src="\coinhunt\Web - Light\nft-1.svg" alt="" className="img-fluid" />
                                                             <div className="textss">
-                                                                <h4>BitHigh</h4>
-                                                                <p>BitHigh</p>
-                                                            </div>
-                                                            <div className="preslae">
-                                                                Presale
+                                                                <h4>SkullApe</h4>
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <button className="mnc">10.26%</button>
+                                                        <Link className="cnc">0.1 BNB</Link>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">$952.678</p>
+                                                        <p className="jhj">BSC</p>
                                                     </td>
                                                     <td>
-                                                        <p className="jhj">Launched Today</p>
+                                                        <p className="jhjf">APPROVED</p>
                                                     </td>
                                                     <td>
-                                                        <button className="bvhjr">
-                                                        <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
-                                                        <p>21667</p>
+                                                         <button className="bvhjr">
+                                                            Detail
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -186,10 +161,10 @@ const PromotedCoin = () => {
                         </div>
                     </div>
                 </section>
-            
+
             </div>
         </>
     )
 }
 
-export default PromotedCoin;
+export default NFt;
