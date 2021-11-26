@@ -23,7 +23,7 @@
         .main-text-feild-head {
             p {
                 font-size: 20px;
-line-height: 15px;
+                line-height: 15px;
                 color: #a5b0ce;
             }
             .iconDiv {
@@ -180,7 +180,7 @@ line-height: 15px;
                 width: 100%;
                 height: 100%;
                 border-radius: 9px;
-                
+
                 object-fit: cover;
             }
             .upload-btn {
@@ -316,7 +316,5 @@ line-height: 15px;
 }
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
-    // display: none;
-    // -webkit-appearance: none;
     filter: invert(50%);
 }
