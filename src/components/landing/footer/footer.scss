@@ -136,11 +136,16 @@
     }
 }
 .light{
-    .main-footer {
-        .inner-icon{
-            h5{
-                color: #F8FAFC;
-            }
-        }
+    .main-footer{
+        background-color: #ffffff;
+    }
+    .main-footer .community h1{
+        color: #2F3955;
+    }
+    .main-footer .community p{
+        color: #808080;
+    }
+    .main-footer .text-mnbv p{
+        color: #808080!important;
     }
 }

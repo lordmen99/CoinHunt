@@ -8,7 +8,6 @@ import Signature from '../../../SignMessage/Signature';
 import { toast } from 'react-toastify';
 import useEthBalance from '../../../hooks/dataFetcher';
 import { useHistory } from 'react-router';
-
 import { useDispatch } from 'react-redux'
 import { changeMode } from "../../../redux/action/index";
 import { useSelector } from 'react-redux';

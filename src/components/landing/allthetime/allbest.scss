@@ -1,7 +1,7 @@
 
 .AllTheTime{
     // background: #242D45;
-    margin-top: 110px;
+    padding-top: 110px;
     .down-nfts{
         padding: 20px 30px;
         border-radius: 20px;
@@ -143,5 +143,43 @@
 @media (max-width: 600px) {
     .AllTheTime .down-nfts .heading-main h4{
         padding-right: 0px;
+    }
+}
+
+
+.light{
+    .AllTheTime{
+        background-color: #ffffff;
+    }
+    .AllTheTime .down-nfts .table thead th{
+        color: #000000;
+        border-bottom: 2px solid #EBEBEB;
+    }
+    .AllTheTime .down-nfts .table td{
+        border-top: 2px solid #EBEBEB;
+    }
+    .AllTheTime .down-nfts .images-outer .textss h4{
+        color: #000000;
+    }
+    .AllTheTime .down-nfts .images-outer .textss p{
+        color: #808080;
+    }
+    .AllTheTime .down-nfts .jhj{
+        color: #808080;
+    }
+    .AllTheTime .down-nfts .bvhjr{
+        background-color: #EBEBEB;
+    }
+    .AllTheTime .down-nfts .bvhjr p{
+        color: #313F62;
+    }
+    .AllTheTime .down-nfts .heading-main h3{
+        color: #2F3955;
+    }
+    .AllTheTime .down-nfts .heading-main h4{
+        color: #2F3955;
+    }
+    .AllTheTime .down-nfts{
+        border: 3px solid #EBEBEB;
     }
 }

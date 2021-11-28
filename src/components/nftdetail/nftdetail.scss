@@ -1,4 +1,7 @@
 .AddNft {
+    .sdhvshd{
+        padding-top: 80px;
+    }
     .AddNft-headings {
         h2 {
             color: #ffffff;
@@ -197,6 +200,7 @@ line-height: 15px;
                 cursor: pointer;
             }
         }
+        
         .upload-div2 {
             padding: 0;
             background: transparent;
@@ -213,6 +217,7 @@ line-height: 15px;
                 height: 100%;
                 border-radius: 9px;
                 object-fit: cover;
+                padding: 10px;
             }
             .upload-btn {
                 position: absolute;
@@ -319,4 +324,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     // display: none;
     // -webkit-appearance: none;
     filter: invert(50%);
+}
+.sdhcsnc{
+    img{
+        padding: 10px;
+    }
 }

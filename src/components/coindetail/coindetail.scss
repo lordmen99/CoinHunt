@@ -1,4 +1,7 @@
 .AddCoin {
+    .sdhvshd{
+        padding-top: 80px;
+    }
     .AddCoin-headings {
         h2 {
             color: #ffffff;
@@ -165,6 +168,7 @@
                 height: 100%;
                 border-radius: 9px;
                 object-fit: cover;
+                padding: 10px;
             }
             .upload-btn {
                 position: absolute;
@@ -277,3 +281,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     // -webkit-appearance: none;
     filter: invert(50%);
 }
+
