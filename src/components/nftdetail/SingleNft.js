@@ -30,7 +30,7 @@ const SingleNft = () => {
                             <div className="col-11 m-auto pt-0">
                                 <div className="row p-md-0">
                                     <div className="col-12 p-md-0">
-                                        <div className="AddNft-headings">
+                                        <div className="AddNft-headings sdhvshd">
                                             <h2 className="">NFT collection listing request</h2>
                                             <h5>Collection Informations</h5>
                                         </div>
@@ -68,8 +68,8 @@ const SingleNft = () => {
                                                     <div className="col-12 pl-md-0 mb-4 mt-5">
                                                         <div class='form-group'>
                                                             <label For='name'>Image<i className="text-danger">*</i></label>
-                                                            <div className='upload-div'>
-                                                                <img src={pic} alt="" className="img-fluid  imoo" />
+                                                            <div className='upload-div sdhcsnc '>
+                                                                <img  src={pic} alt="" className="img-fluid  imoo" />
                                                             </div>
                                                         </div>
                                                     </div>

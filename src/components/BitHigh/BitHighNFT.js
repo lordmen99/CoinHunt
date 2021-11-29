@@ -75,7 +75,7 @@ const BitHighNFT = () => {
                                             </div>
                                             <div className="col-lg-7 col-12 pr-md-0">
                                                 <div className="right-side-nft">
-                                                    <div className="upper-dks">
+                                                    <div className="upper-dks align-items-center">
                                                         <div className="left-name">
                                                             <h3>BscMomsNFT</h3>
                                                         </div>
@@ -86,18 +86,33 @@ const BitHighNFT = () => {
                                                             </button>
                                                         </div>
                                                     </div>
+                                                    <div className="right-divs mt-4 d-sm-none d-block">
+                                                        <Link><img src="\coinhunt\Web - Light\Frame 275.svg" alt="" className="img-fluid" /></Link>
+                                                        <Link><img src="\coinhunt\Web - Light\Frame 276.svg" alt="" className="img-fluid" /></Link>
+                                                        <Link><img src="\coinhunt\Web - Light\Frame 277.svg" alt="" className="img-fluid" /></Link>
+                                                    </div>
                                                     <div className="linksss">
-                                                        <div className="left-divs">
+                                                        <div className="left-divs d-sm-block d-none">
                                                             <h5>Website</h5>
                                                             <p>http://bscfamilynft.com/</p>
                                                         </div>
-                                                        <div className="right-divs">
+                                                        <div className="right-divs d-sm-block d-none">
                                                             <Link><img src="\coinhunt\Web - Light\Frame 275.svg" alt="" className="img-fluid" /></Link>
                                                             <Link><img src="\coinhunt\Web - Light\Frame 276.svg" alt="" className="img-fluid" /></Link>
                                                             <Link><img src="\coinhunt\Web - Light\Frame 277.svg" alt="" className="img-fluid" /></Link>
                                                         </div>
                                                     </div>
-                                                    <div className="kjasbcijw">
+                                                    <div className='linksss-mobile d-flex justify-content-between align-items-center mt-4 w-100 d-block d-sm-none'>
+                                                        <div className='left-mobile'>
+                                                            <h5>Website</h5>
+                                                            <p>http://bscfamilynft.com/</p>
+                                                        </div>
+                                                        <div className='left-mobile'>
+                                                            <h5>Floor price</h5>
+                                                            <p>0.08 BNB</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="kjasbcijw d-sm-block d-none">
                                                         <div className="jshvcd">
                                                             <h5>Market Cap</h5>
                                                             <p>0.08 BNB</p>

@@ -16,7 +16,7 @@ function SingleCoinDetail() {
                             <div className="col-11 m-auto pt-0">
                                 <div className="row p-md-0">
                                     <div className="col-12 p-md-0">
-                                        <div className="AddCoin-headings">
+                                        <div className="AddCoin-headings sdhvshd">
                                             <h2 className="">Coin listing request</h2>
                                             <h5>Coin Informations</h5>
                                         </div>
@@ -53,7 +53,7 @@ function SingleCoinDetail() {
                                                     <div className="col-12 pl-md-0 mb-4">
                                                         <div class='form-group'>
                                                             <label For='name'>Upload Logo (500X500 pixels)<i className="text-danger">*</i></label>
-                                                            <div className='upload-div upload-div2'>
+                                                            <div className='upload-div upload-div2 sdhcsnc'>
                                                                 <img src={pic} alt="" className="img-fluid imoo" />
                                                             </div>
                                                         </div>

@@ -633,7 +633,13 @@ line-height: 15px;
 }
 
 .light {
-  background: #0f172a;
+  body{
+    background-color: #ffffff;
+  }
+  background: #ffffff;
+  .heading-main h3{
+    color: #2F3955;
+  }
   h2 {
     color: #f8fafc !important;
   }

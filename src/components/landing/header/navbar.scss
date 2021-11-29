@@ -35,11 +35,11 @@
         border: none !important;
     }
     .mdhfy {
-        border: 1px solid #6c01c3;
+        border: 1px solid #868486;
         padding: 5px 12px;
         border-radius: 8px;
         i {
-            color: #6c01c3;
+            color: #868486;
         }
     }
     .profile-head-img {
@@ -216,7 +216,7 @@
         color: #f8fafc !important;
     }
     .main-navbar .navbar-nav .nav-link {
-        color: #94a3b8;
+        color: #2F3955;
     }
 }
 
@@ -249,6 +249,15 @@
     align-items: center;
 }
 .light{
+    .main-navbar{
+        border-bottom: 1px solid #EBEBEB;
+    }
+    .main-navbar .search-in input{
+        background: #EEEEEE;
+    }
+    .main-navbar{
+        background-color: #ffffff;
+    }
     .tryvbd{
         background: #1f2533;
     }

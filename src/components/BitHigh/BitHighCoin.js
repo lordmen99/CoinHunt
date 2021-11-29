@@ -61,7 +61,7 @@ const BitHighCoin = () => {
                         </div>
                     </div>
                 </div>
-                <section className="Bithigh-NFT">
+                <section className="Bithigh-NFT Bithigh-Coin-mobile">
                     <div className="nfts-profiles">
                         <div className="container-fluid p-0">
                             <div className="row">
@@ -69,15 +69,15 @@ const BitHighCoin = () => {
                                     <div className="detailss">
                                         <div className="row">
                                             <div className="col-lg-5 col-12 pl-md-0">
-                                                <div className="main-bithigh-image">
+                                                <div className="main-bithigh-image d-none d-sm-block">
                                                     <img src="\coinhunt\Web - Light\bithigh-image.png" alt="" className="img-fluid" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-7 col-12 pr-md-0">
                                                 <div className="right-side-nft">
                                                     <div className="upper-dks">
-                                                        <div className="left-name">
-                                                            <h3>BitHigh</h3>
+                                                        <div className="left-name ">
+                                                            <img src="\coinhunt\Web - Light\bithigh-image.png" alt="" className="img-fluid d-block d-sm-none w-25" /> <div className='d-flex flex-column justify-content-center align-items-center'><h3 className=' h3'>BitHigh</h3> <p>BITHIGH</p></div>
                                                         </div>
                                                         <div className="right-namekcm">
                                                             <button className="bvhjr">
@@ -86,13 +86,36 @@ const BitHighCoin = () => {
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div className="linkssssdhg">
-                                                        <p>Binance Smart Chain : <span>0xfbc6a41c0a436cc7a11ce27f85ddf3121fcc00cf<button className="ml-4"><img src="\coinhunt\Web - Light\feather_copy.svg" alt="" className="img-fluid" /></button></span></p>
+                                                    <div className="linkssssdhg pt-sm-0 pt-3 d-none d-sm-block">
+                                                        <p>Binance Smart Chain : <span >0xfbc6a41c0a436cc7a11ce27f85ddf3121fcc00cf<button className="ml-4"><img src="\coinhunt\Web - Light\feather_copy.svg" alt="" className="img-fluid" /></button></span></p>
                                                         <div className="right-divs">
                                                             <Link><img src="\coinhunt\Web - Light\Frame 275.svg" alt="" className="img-fluid" /></Link>
                                                             <Link><img src="\coinhunt\Web - Light\Frame 276.svg" alt="" className="img-fluid" /></Link>
                                                             <Link><img src="\coinhunt\Web - Light\Frame 277.svg" alt="" className="img-fluid" /></Link>
                                                             <Link><img src="\coinhunt\Web - Light\Frame 278.svg" alt="" className="img-fluid" /></Link>
+                                                        </div>
+                                                    </div>
+                                                    <div className='linkssssdhg-mobile pt-sm-0 pt-4 d-block d-sm-none'>
+                                                        <div className="row p-0">
+                                                            <div className="col-9 p-0 text-start text-truncate"><p>Binance Smart Chain : </p>
+                                                                <span className='text-truncate'>0xfbc6a41c0a436cc7a11ce27f85ddf3121fcc00cf</span></div>
+                                                            <div className="col-3 pt-3"> <span><button className=""><img src="\coinhunt\Web - Light\feather_copy.svg" alt="" className="img-fluid" /></button></span></div>
+                                                            </div>
+                                                        <div className="right-divs mt-4">
+                                                            <Link><img src="\coinhunt\Web - Light\Frame 275.svg" alt="" className="img-fluid" /></Link>
+                                                            <Link><img src="\coinhunt\Web - Light\Frame 276.svg" alt="" className="img-fluid" /></Link>
+                                                            <Link><img src="\coinhunt\Web - Light\Frame 277.svg" alt="" className="img-fluid" /></Link>
+                                                            <Link><img src="\coinhunt\Web - Light\Frame 278.svg" alt="" className="img-fluid" /></Link>
+                                                        </div>
+                                                    </div>
+                                                    <div className='linksss-mobile-coin d-flex justify-content-between align-items-center mt-5 mb-4 w-100 d-block d-sm-none'>
+                                                        <div className='left-mobile'>
+                                                            <h5>Launch Date</h5>
+                                                            <p>November 15,2021</p>
+                                                        </div>
+                                                        <div className='left-mobile'>
+                                                            <h5>Market Cap</h5>
+                                                            <p>$0</p>
                                                         </div>
                                                     </div>
                                                     <div className="kjasbcijw">
@@ -107,7 +130,7 @@ const BitHighCoin = () => {
                                                     </div>
                                                     <div className="ajsbsjkc">
                                                         <p className="mt-4">An elastic supply token will expand or contract its circulating supply depending on where it trades relative to its peg price.</p>
-                                                        <p className="mt-4">BITHIGH is mathematically designed to increase in price every 12 hours, allowing you to be worry-free knowing your investment is protected through a constantly increasing liquidity pool solidifying the price floor.</p>
+                                                        <p className="mt-4 d-none d-sm-block">BITHIGH is mathematically designed to increase in price every 12 hours, allowing you to be worry-free knowing your investment is protected through a constantly increasing liquidity pool solidifying the price floor.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -175,7 +198,7 @@ const BitHighCoin = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                     </div>

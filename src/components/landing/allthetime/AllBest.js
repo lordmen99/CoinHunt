@@ -7,7 +7,7 @@ const AllTheTime = () => {
     return (
         <>
             <div className={lightMode ? "" : "light"}>
-                <section className="AllTheTime">
+                <section className="AllTheTime d-none d-sm-block">
                     <div className="container-fluid p-0">
                         <div className="row">
                             <div className="col-sm-11 m-auto">
@@ -183,6 +183,220 @@ const AllTheTime = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="AllTheTime-mobile d-block d-sm-none">
+                    {/* <div className="container-fluid p-0">
+                        <div className="row">
+                            <div className="col-sm-12 m-auto">
+                                <div className="down-nfts heading-main d-flex justify-content-between w-100">
+                                    <div className="left">
+                                        <h3>All Time Best</h3>
+                                    </div>
+                                    <div className="right">
+                                        <h4>View All</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> */}
+                    <div className="container-fluid">
+                        <div className="row p-0">
+                            {/* <div className='d-flex flex-column AllTheTime-mobile-inner'> */}
+                                <div className="col-12 p-0 m-auto">
+                                    <div className="atm-top d-flex justify-content-between align-items-center w-100">
+                                            <h3>All Time Best</h3>
+                                            <h4>View All</h4>
+                                    </div>
+                                </div>
+                                <div className="col-12 p-0 m-auto">
+                                    <div className='row p-0'>
+                                        <div className="col-12 p-0">
+                                            <div className='Promotedcoin-row'>
+                                                <div className='img-div mr-2'>
+                                                    <img src="\coinhunt\Web - Light\image 6.svg" className='img-fluid' alt="" />
+                                                </div>
+                                                <div className=" d-flex justify-content-between w-100 align-items-center">
+                                                    <div className='some-detail-div'>
+                                                        <p className="sdd-p">Stroam Bringer</p>
+                                                        <div className='some-detail mt-2'>
+                                                            <p>JIND</p>
+                                                            <p>$890.690</p>
+                                                            <p>8days</p>
+                                                        </div>
+                                                        <div className='Badge-div mt-2'>
+                                                            <span class="badge custom-badge badge-primary">Primary</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='btn-div'>
+                                                        <button className="bvhjr">
+                                                            <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
+                                                            <p>21667</p>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className='Promotedcoin-row'>
+                                                <div className='img-div mr-2'>
+                                                    <img src="\coinhunt\Web - Light\image 6.svg" className='img-fluid' alt="" />
+                                                </div>
+                                                <div className=" d-flex justify-content-between w-100 align-items-center">
+                                                    <div className='some-detail-div'>
+                                                        <p className="sdd-p">Stroam Bringer</p>
+                                                        <div className='some-detail mt-2'>
+                                                            <p>JIND</p>
+                                                            <p>$890.690</p>
+                                                            <p>8 days</p>
+                                                        </div>
+                                                        <div className='Badge-div mt-2'>
+                                                            <span class="badge custom-badge badge-primary">Primary</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='btn-div'>
+                                                        <button className="bvhjr">
+                                                            <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
+                                                            <p>21667</p>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className='Promotedcoin-row'>
+                                                <div className='img-div mr-2'>
+                                                    <img src="\coinhunt\Web - Light\image 6.svg" className='img-fluid' alt="" />
+                                                </div>
+                                                <div className=" d-flex justify-content-between w-100 align-items-center">
+                                                    <div className='some-detail-div'>
+                                                        <p className="sdd-p">Stroam Bringer</p>
+                                                        <div className='some-detail mt-2'>
+                                                            <p>JIND</p>
+                                                            <p>$890.690</p>
+                                                            <p>8 days</p>
+                                                        </div>
+                                                        <div className='Badge-div mt-2'>
+                                                            <span class="badge custom-badge badge-primary">Primary</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='btn-div'>
+                                                        <button className="bvhjr">
+                                                            <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
+                                                            <p>21667</p>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className='Promotedcoin-row'>
+                                                <div className='img-div mr-2'>
+                                                    <img src="\coinhunt\Web - Light\image 6.svg" className='img-fluid' alt="" />
+                                                </div>
+                                                <div className=" d-flex justify-content-between w-100 align-items-center">
+                                                    <div className='some-detail-div'>
+                                                        <p className="sdd-p">Stroam Bringer</p>
+                                                        <div className='some-detail mt-2'>
+                                                            <p>JIND</p>
+                                                            <p>$890.690</p>
+                                                            <p>8 days</p>
+                                                        </div>
+                                                        <div className='Badge-div mt-2'>
+                                                            <span class="badge custom-badge badge-primary">Primary</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='btn-div'>
+                                                        <button className="bvhjr">
+                                                            <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
+                                                            <p>21667</p>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className='Promotedcoin-row'>
+                                                <div className='img-div mr-2'>
+                                                    <img src="\coinhunt\Web - Light\image 6.svg" className='img-fluid' alt="" />
+                                                </div>
+                                                <div className=" d-flex justify-content-between w-100 align-items-center">
+                                                    <div className='some-detail-div'>
+                                                        <p className="sdd-p">Stroam Bringer</p>
+                                                        <div className='some-detail mt-2'>
+                                                            <p>JIND</p>
+                                                            <p>$890.690</p>
+                                                            <p>8 days</p>
+                                                        </div>
+                                                        <div className='Badge-div mt-2'>
+                                                            <span class="badge custom-badge badge-primary">Primary</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='btn-div'>
+                                                        <button className="bvhjr">
+                                                            <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
+                                                            <p>21667</p>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className='Promotedcoin-row'>
+                                                <div className='img-div mr-2'>
+                                                    <img src="\coinhunt\Web - Light\image 6.svg" className='img-fluid' alt="" />
+                                                </div>
+                                                <div className=" d-flex justify-content-between w-100 align-items-center">
+                                                    <div className='some-detail-div'>
+                                                        <p className="sdd-p">Stroam Bringer</p>
+                                                        <div className='some-detail mt-2'>
+                                                            <p>JIND</p>
+                                                            <p>$890.690</p>
+                                                            <p>8 days</p>
+                                                        </div>
+                                                        <div className='Badge-div mt-2'>
+                                                            <span class="badge custom-badge badge-primary">Primary</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='btn-div'>
+                                                        <button className="bvhjr">
+                                                            <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
+                                                            <p>21667</p>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className='Promotedcoin-row'>
+                                                <div className='img-div mr-2'>
+                                                    <img src="\coinhunt\Web - Light\image 6.svg" className='img-fluid' alt="" />
+                                                </div>
+                                                <div className=" d-flex justify-content-between w-100 align-items-center">
+                                                    <div className='some-detail-div'>
+                                                        <p className="sdd-p">Stroam Bringer</p>
+                                                        <div className='some-detail mt-2'>
+                                                            <p>JIND</p>
+                                                            <p>$890.690</p>
+                                                            <p>8 days</p>
+                                                        </div>
+                                                        <div className='Badge-div mt-2'>
+                                                            <span class="badge custom-badge badge-primary">Primary</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='btn-div'>
+                                                        <button className="bvhjr">
+                                                            <img src="\coinhunt\Web - Light\color.svg" alt="" className="img-fluid" />
+                                                            <p>21667</p>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {/* </div> */}
                         </div>
                     </div>
                 </section>
