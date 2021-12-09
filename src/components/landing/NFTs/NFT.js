@@ -68,7 +68,7 @@ const NFts = () => {
                                 <div className="Nfts">
                                     <div className="first-second">
                                         <OwlCarousel className="slider-items owl-carousel ltf-owl" autoplaySpeed={3000}  {...owl_option}>
-                                            <Link to="#">
+                                            <Link to="/BitNFT">
                                                 <div className="item mt-2">
                                                     <div className="main-card text-center">
                                                         <div className="icon">

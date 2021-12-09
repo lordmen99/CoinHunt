@@ -36,7 +36,7 @@ const PromotedCoin = () => {
                                                 <tr>
                                                     <td>
                                                         <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\image 6.svg" alt="" className="img-fluid" />
+                                                            <Link to="/BitCoin"><img src="\coinhunt\Web - Light\image 6.svg" alt="" className="img-fluid" /></Link>
                                                             <div className="textss">
                                                                 <h4>BitHigh</h4>
                                                                 <p>BitHigh</p>

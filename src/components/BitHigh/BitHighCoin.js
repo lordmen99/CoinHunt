@@ -33,19 +33,16 @@ const BitHighCoin = () => {
                 items: 3,
                 stagePadding: 10,
                 margin: 10,
-
             },
             1000: {
                 items: 4,
                 stagePadding: 10,
                 margin: 32,
-
             },
             1200: {
                 items: 5,
                 stagePadding: 10,
                 margin: 32,
-
             }
         },
     };
