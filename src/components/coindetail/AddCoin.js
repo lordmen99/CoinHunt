@@ -20,6 +20,8 @@ const AddCoin = () => {
         }
     }
     const lightMode = useSelector((state) => state.themereducer.lightMode)
+
+    // const addcoin = ÷
     return (
         <>
             <div className={lightMode ? "" : "light"}>
