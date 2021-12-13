@@ -148,6 +148,12 @@ h2 {
   font-size: 16px;
   line-height: 24px;
   color: #FFFFFF;
+  border: 1px solid transparent;
+  &:hover{
+    background-color: transparent;
+    border: 1px solid #F74A4A;
+    color: #F74A4A;
+  }
 }
 .table-red{
   background: #F74A4A;
@@ -460,13 +466,49 @@ h2 {
       // font-size: 14px!important;
       line-height: 24px;
       font-size: 16px;
-line-height: 15px;
+      line-height: 15px;
       color: #A5B0CE !important;
   }
 }
 .MuiOutlinedInput-notchedOutline{
   border-radius: 9px !important;
   border: transparent !important;
+}
+.shsjsjsx{
+  .MuiOutlinedInput-input{
+    margin-bottom: 30px!important;
+    // width: 450px !important;
+    // padding: .5px 14px;
+    height: 100px!important;
+    padding: 0px 20px!important;
+    font-family: 'poppins'!important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px!important;
+    line-height: 24px;
+    background: #2F3955 !important;
+    border-radius: 9px !important;
+    color: #A5B0CE !important;
+    border: none !important;
+    outline: none !important;
+    &::placeholder{
+        font-family: 'poppins'!important;
+        font-style: normal;
+        // font-weight: 500;
+        // font-size: 14px!important;
+        line-height: 24px;
+        font-size: 16px;
+  line-height: 15px;
+        color: #A5B0CE !important;
+    }
+  }
+  .MuiOutlinedInput-inputMultiline{
+    padding: 18.5px 14px!important;
+  }
+  .MuiOutlinedInput-multiline{
+    padding: 6px 0 7px!important;
+  }
+
 }
 .green {
   color: #6dff39;

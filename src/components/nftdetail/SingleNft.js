@@ -1,15 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from "react-router-dom";
 import './nftdetail.scss';
 import { useSelector } from 'react-redux'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import pic from '../../Assets/our-team-background.png'
-import { useState } from 'react';
 import twiter from '../../Assets/telegram 1.svg'
+import axios from 'axios';
+import { API_URL } from '../../utils/ApiURL';
 
 const SingleNft = () => {
     const [photo, setPhoto] = useState();
     const [uploadImage, updateuploadImage] = useState("");
+    const lightMode = useSelector((state) => state.themereducer.lightMode)
+    const { id } = useParams();
+    const [singlenft, setsinglenft] = useState({
+        blockChian: '',
+        description: '',
+        imageUrl: '',
+        name: '',
+        nftDiscordLink: '',
+        nftInstagramLink: '',
+        nftTelegramLink: '',
+        nftTwitterLink: '',
+        time: '',
+        webSite: '',
+        price: ''
+    });
+    // console.log("single nft id", id)
     async function catchImage(e) {
         try {
             const file = e.target.files[0]
@@ -20,7 +37,19 @@ const SingleNft = () => {
             console.log(e)
         }
     }
-    const lightMode = useSelector((state) => state.themereducer.lightMode)
+    useEffect(() => {
+        singlenftdetail()
+    }, [id])
+
+    const singlenftdetail = (e) => {
+        axios.post(`${API_URL}/v1/nft/getDetailOfSingleNft`, { _id: id })
+            .then((response) => {
+                setsinglenft(response.data.data)
+            })
+    }
+    // console.log("single nft data", singlenft)
+    // const {blockChian,description,imageUrl,name,nftDiscordLink,nftInstagramLink,nftTelegramLink,nftTwitterLink,time,webSite} = singlenft
+    // console.log("chain, description, name, time, website", singlenft.blockChian, singlenft.description, singlenft.name, singlenft.time, singlenft.webSite)
     return (
         <>
             <div className={lightMode ? "" : "light"}>
@@ -44,39 +73,39 @@ const SingleNft = () => {
                                                     <div className="col-6 pl-md-0">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Title<i className="text-danger">*</i></label>
-                                                            <p>BscMomsNFT</p>
+                                                            <p className="sdnss">{singlenft.name}</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-6 pr-md-0">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Mint / Floor Price<i className="text-danger">*</i></label>
-                                                            <p>$1.009</p>
+                                                            <p className="sdnss">${singlenft.price}</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-6 pl-md-0 mt-4">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Chain<i className="text-danger">*</i></label>
-                                                            <p>Solana</p>
+                                                            <p className="sdnss">{singlenft.blockChian}</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-6 pr-md-0 mt-4">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Website</label>
-                                                            <p>http//rc-2token.cc/</p>
+                                                            <p className="sdnss">{singlenft.webSite}</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-12 pl-md-0 mb-4 mt-5">
                                                         <div class='form-group'>
                                                             <label For='name'>Image<i className="text-danger">*</i></label>
                                                             <div className='upload-div sdhcsnc '>
-                                                                <img  src={pic} alt="" className="img-fluid  imoo" />
+                                                                <img src={singlenft.imageUrl} alt="" className="img-fluid  imoo" />
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 pb-4 pl-md-0">
                                                         <div class='form-group main-text-feild-head'>
                                                             <label For='name'>Launch date</label>
-                                                            <p>20/12/21 12:34:00</p>
+                                                            <p className="sdnss">{singlenft.time}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -98,7 +127,7 @@ const SingleNft = () => {
                                                             <label For="name">Telegram Link</label>
                                                             <div className="iconDiv2">
                                                                 <img src={twiter} className="iconDivImg" alt="" />
-                                                                <p className='text-truncate'>tg.com/link</p>
+                                                                <p className='text-truncate sdnss'>{singlenft.nftTelegramLink}</p>
                                                             </div>
                                                         </div>
 
@@ -108,7 +137,7 @@ const SingleNft = () => {
                                                             <label For="name">Twitter Link</label>
                                                             <div className="iconDiv2">
                                                                 <img src={twiter} className="iconDivImg" alt="" />
-                                                                <p className='text-truncate'>www.twitter.com/coininfo</p>
+                                                                <p className='text-truncate sdnss'>{singlenft.nftTwitterLink}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -117,7 +146,7 @@ const SingleNft = () => {
                                                             <label For="name">Instagram Link</label>
                                                             <div className="iconDiv2">
                                                                 <img src={twiter} className="iconDivImg" alt="" />
-                                                                <p className='text-truncate'>tg.com/link</p>
+                                                                <p className='text-truncate sdnss'>{singlenft.nftInstagramLink}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -126,7 +155,7 @@ const SingleNft = () => {
                                                             <label For="name">Discord Link</label>
                                                             <div className="iconDiv2">
                                                                 <img src={twiter} className="iconDivImg" alt="" />
-                                                                <p className='text-truncate'>tg.com/link</p>
+                                                                <p className='text-truncate sdnss'>{singlenft.nftDiscordLink}</p>
                                                             </div>
                                                         </div>
                                                     </div>

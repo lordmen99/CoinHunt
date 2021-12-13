@@ -16,7 +16,8 @@ const connectorsByName = {
 };
 
 const Navbar = () => {
-
+    const TokenGet = localStorage.getItem("LoginToken");
+    console.log("login token", TokenGet)
     const context = useWeb3React();
     const { account, activate, deactivate } = context;
     // const [ account, setc] =useState(123);
@@ -120,9 +121,17 @@ const Navbar = () => {
                                             <ul className="list-inline">
                                                 <li className="list-inline-item">
                                                     <div className="dropdown ml">
-                                                        <button className="btn-haed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            Sign in
-                                                        </button>
+                                                        {TokenGet
+                                                            ?
+                                                            <button className="btn-haed-disconnect" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                SignOut
+                                                            </button>
+                                                            :
+                                                            <button className="btn-haed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                Sign in
+                                                            </button>
+                                                        }
+
                                                     </div>
                                                 </li>
                                                 <li className="list-inline-item">

@@ -9,6 +9,16 @@ import { useState } from 'react';
 const AddCoin = () => {
     const [photo, setPhoto] = useState();
     const [uploadImage, updateuploadImage] = useState("");
+    const [allFormData, setAllFormData] = useState({
+        formData: { name: '', price: '', website: '', chain: '', instagramelink: '', telegramlink: '', twitterlink: '', discordlink: '', date: '' }
+    })
+    const handleChange = (event) => {
+        const { formData } = allFormData;
+        const value = event.target.value;
+        formData[event.target.name] = value;
+        setAllFormData({ formData });
+    }
+    console.log("set vale", allFormData)
     async function catchImage(e) {
         try {
             const file = e.target.files[0]
@@ -19,8 +29,12 @@ const AddCoin = () => {
             console.log(e)
         }
     }
+    const addnft = (async () => {
+    
+    })
+  
     const lightMode = useSelector((state) => state.themereducer.lightMode)
-
+    
     // const addcoin = ÷
     return (
         <>

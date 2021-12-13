@@ -35,7 +35,7 @@ function App() {
             <Route exact path='/Login' component={HomeLogin} />
             <Route exact path='/AddCoin' component={AddCoin} />
             <Route exact path='/AddNft' component={AddNft} />
-            <Route exact path='/SingleNft' component={SingleNft} />
+            <Route exact path='/SingleNft/:id' component={SingleNft} />
             <Route exact path='/SingleCoinDetail' component={SingleCoinDetail} />
             <Route exact path='/Profile' component={Profile} />
             <Route exact path='/AllNFTDetail' component={NFt} />

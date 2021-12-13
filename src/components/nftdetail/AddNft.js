@@ -6,20 +6,59 @@ import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import pic from '../../Assets/our-team-background.png'
 import { useState } from 'react';
 import twiter from '../../Assets/telegram 1.svg'
+import axios from 'axios';
+import { API_URL } from '../../utils/ApiURL';
 
 const AddNft = () => {
     const [photo, setPhoto] = useState();
     const [uploadImage, updateuploadImage] = useState("");
+    const [allFormData, setAllFormData] = useState({
+        formData: { name: '', price: '', description: '', website: '', chain: '', instagramelink: '', telegramlink: '', twitterlink: '', discordlink: '', date: '' }
+    })
+    const handleChange = (event) => {
+        const { formData } = allFormData;
+        const value = event.target.value;
+        formData[event.target.name] = value;
+        setAllFormData({ formData });
+    }
+    // console.log("imageuploaded", photo)
+    // console.log("set vale", allFormData)
     async function catchImage(e) {
         try {
             const file = e.target.files[0]
-            setPhoto(e.target.files[0])
+            setPhoto(file)
             updateuploadImage(URL.createObjectURL(e.target.files[0]));
-            console.log(file, "file")
+            // console.log(file, "file")
         } catch (e) {
             console.log(e)
         }
     }
+
+    const addnft = (async () => {
+        // event.preventDefault()
+        // formValidation()
+        console.log("data.append( allFormData.formData.price  :)", allFormData.formData.price)
+        const data = new FormData();
+        data.append("imageUrl", photo)
+        data.append("name", allFormData.formData.name)
+        data.append("description", allFormData.formData.description)
+        data.append("price", allFormData.formData.price)
+        data.append("blockChian", allFormData.formData.chain)
+        data.append("webSite", allFormData.formData.website)
+        data.append("nftInstagramLink", allFormData.formData.instagramelink)
+        data.append("nftTelegramLink", allFormData.formData.telegramlink)
+        data.append("nftTwitterLink", allFormData.formData.twitterlink)
+        data.append("nftDiscordLink", allFormData.formData.discordlink)
+        data.append("time", allFormData.formData.date)
+        console.log("data add for nft", data)
+        axios.post(`${API_URL}/v1/Nft/addNft`, data,{ headers: { 'Content-Type': 'multipart/form-data' } })
+            .then((response) => {
+                console.log("success response", response)
+            }).catch((err) => {
+                console.log("error responce", err)
+            })
+    })
+
     const lightMode = useSelector((state) => state.themereducer.lightMode)
     return (
         <>
@@ -52,29 +91,33 @@ const AddNft = () => {
                                                 <div className="row p-md-0">
                                                     <div className="col-md-6 pl-md-0">
                                                         <div class="form-group main-text-feild-head">
-                                                            <label For="name">Name</label>
+                                                            <label For="name">Title</label>
                                                             <TextValidator fullWidth type='text'
-                                                                name='titleName'
+                                                                name='name'
                                                                 autoComplet='off'
+                                                                // value={allFormData.formData.name}
+                                                                onChange={handleChange}
                                                                 variant='outlined'
-                                                                placeholder='Ex : Bitcoin'
+                                                                placeholder='Ex : Degan Ape Acadmey'
                                                                 className='input-fields'
                                                                 validators={['required']}
-                                                                errorMessages={['Item Name is required']}
+                                                                errorMessages={['Name is Required']}
                                                             />
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 pr-md-0">
                                                         <div class="form-group main-text-feild-head">
-                                                            <label For="name">Collection Informations</label>
+                                                            <label For="name">Mint / Floor Price</label>
                                                             <TextValidator fullWidth type='text'
-                                                                name='titleName'
+                                                                name='price'
                                                                 autoComplet='off'
+                                                                // value={allFormData.formData.name}
+                                                                onChange={handleChange}
                                                                 variant='outlined'
-                                                                placeholder='Enter Title Name'
+                                                                placeholder='Ex : 0.06'
                                                                 className='Ex : BTC'
                                                                 validators={['required']}
-                                                                errorMessages={['Item Name is required']}
+                                                                errorMessages={['Mint price is Required']}
                                                             />
                                                         </div>
                                                     </div>
@@ -82,13 +125,15 @@ const AddNft = () => {
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Chain</label>
                                                             <TextValidator fullWidth type='text'
-                                                                name='titleName'
+                                                                name='chain'
                                                                 autoComplet='off'
+                                                                // value={allFormData.formData.name}
+                                                                onChange={handleChange}
                                                                 variant='outlined'
-                                                                placeholder='Ex : Bitcoin'
+                                                                placeholder='Ex : Solana'
                                                                 className='input-fields'
                                                                 validators={['required']}
-                                                                errorMessages={['Item Name is required']}
+                                                                errorMessages={['Chain Name Required']}
                                                             />
                                                         </div>
                                                     </div>
@@ -96,13 +141,15 @@ const AddNft = () => {
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Website</label>
                                                             <TextValidator fullWidth type='text'
-                                                                name='titleName'
+                                                                name='website'
                                                                 autoComplet='off'
+                                                                // value={allFormData.formData.name}
+                                                                onChange={handleChange}
                                                                 variant='outlined'
-                                                                placeholder='Enter Title Name'
+                                                                placeholder='Ex : http//rc-2token.cc/'
                                                                 className='Ex : BTC'
                                                                 validators={['required']}
-                                                                errorMessages={['Item Name is required']}
+                                                                errorMessages={['Website Name is Required']}
                                                             />
                                                         </div>
                                                     </div>
@@ -120,7 +167,7 @@ const AddNft = () => {
                                                             <TextValidator
                                                                 fullWidth
                                                                 type='file'
-                                                                name='descriptionn'
+                                                                name='image'
                                                                 autoComplet='off'
                                                                 // value={allData.form.name}
                                                                 // value={allData.form.descriptionn}
@@ -132,7 +179,7 @@ const AddNft = () => {
                                                                 className='input-fields d-none'
                                                                 id='files'
                                                                 validators={['required']}
-                                                                errorMessages={['Item Name is required']}
+                                                                errorMessages={['Image must be Selected']}
                                                             />
                                                         </div>
                                                     </div>
@@ -142,19 +189,36 @@ const AddNft = () => {
                                                             <TextValidator
                                                                 fullWidth
                                                                 type='date'
-                                                                name='descriptionn'
+                                                                name='date'
                                                                 autoComplet='off'
-                                                                // value={allData.form.name}
-                                                                // value={allData.form.descriptionn}
-                                                                // onChange={handleChange}
+                                                                // value={allFormData.formData.name}
+                                                                onChange={handleChange}
                                                                 variant='outlined'
-                                                                multiLine
-                                                                rows={3}
                                                                 placeholder='mm/dd/yyyy --:-- --'
                                                                 className='input-fields dateInput'
                                                                 validators={['required']}
-                                                                errorMessages={['Item Name is required']}
+                                                                errorMessages={['Date must be selected']}
                                                             />
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-md-12 pl-md-0">
+                                                        <div class='form-group shsjsjsx'>
+                                                            <label For='name'>Description</label>
+                                                            <TextValidator
+                                                                fullWidth
+                                                                type="text"
+                                                                name="description"
+                                                                // value={allFormData.formData.description}
+                                                                onChange={handleChange}
+                                                                placeholder="Enter Your Description..."
+                                                                className="input-fields"
+                                                                variant="outlined"
+                                                                validators={['required']}
+                                                                errorMessages={['Description field is required']}
+                                                                multiline
+                                                                rows={4}
+                                                            />
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -171,37 +235,39 @@ const AddNft = () => {
                                                 </div>
                                                 <div className="row p-md-0">
                                                     <div className="col-md-6 pl-md-0">
-
                                                         <div class="form-group main-text-feild-head">
-                                                            <label For="name">Website Link</label>
+                                                            <label For="name">Discord Link</label>
                                                             <div className="iconDiv">
                                                                 <img src={twiter} className="iconDivImg" alt="" />
                                                                 <TextValidator fullWidth type='text'
-                                                                    name='titleName'
+                                                                    name='discordlink'
                                                                     autoComplet='off'
                                                                     variant='outlined'
-                                                                    placeholder='Enter website address of your project'
+                                                                    // value={allFormData.formData.name}
+                                                                    onChange={handleChange}
+                                                                    placeholder='Enter telegram link of your project'
                                                                     className='input-fields'
                                                                     validators={['required']}
-                                                                    errorMessages={['Item Name is required']}
+                                                                    errorMessages={['Optional']}
                                                                 /></div>
                                                         </div>
-
                                                     </div>
                                                     <div className="col-md-6 pr-md-0">
                                                         <div class="form-group main-text-feild-head">
                                                             <label For="name">Twitter Link</label>
                                                             <div className="iconDiv">
                                                                 <img src={twiter} className="iconDivImg" alt="" />
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                variant='outlined'
-                                                                placeholder='Enter twitter link of your project'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                                <TextValidator fullWidth type='text'
+                                                                    name='twitterlink'
+                                                                    autoComplet='off'
+                                                                    // value={allFormData.formData.name}
+                                                                    onChange={handleChange}
+                                                                    variant='outlined'
+                                                                    placeholder='Enter telegram link of your project'
+                                                                    className='input-fields'
+                                                                    validators={['required']}
+                                                                    errorMessages={['Optional']}
+                                                                />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -210,38 +276,42 @@ const AddNft = () => {
                                                             <label For="name">Telegram Link</label>
                                                             <div className="iconDiv">
                                                                 <img src={twiter} className="iconDivImg" alt="" />
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                variant='outlined'
-                                                                placeholder='Enter telegram link of your project'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                                <TextValidator fullWidth type='text'
+                                                                    name='telegramlink'
+                                                                    autoComplet='off'
+                                                                    variant='outlined'
+                                                                    // value={allFormData.formData.name}
+                                                                    onChange={handleChange}
+                                                                    placeholder='Enter telegram link of your project'
+                                                                    className='input-fields'
+                                                                    validators={['required']}
+                                                                    errorMessages={['Optional']}
+                                                                />
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 pr-md-0">
                                                         <div class="form-group main-text-feild-head">
-                                                            <label For="name">Twitter Link</label>
+                                                            <label For="name">Instagrame Link</label>
                                                             <div className="iconDiv">
                                                                 <img src={twiter} className="iconDivImg" alt="" />
-                                                            <TextValidator fullWidth type='text'
-                                                                name='titleName'
-                                                                autoComplet='off'
-                                                                variant='outlined'
-                                                                placeholder='Enter twitter link of your project'
-                                                                className='input-fields'
-                                                                validators={['required']}
-                                                                errorMessages={['Item Name is required']}
-                                                            />
+                                                                <TextValidator fullWidth type='text'
+                                                                    name='instagramelink'
+                                                                    autoComplet='off'
+                                                                    // value={allFormData.formData.name}
+                                                                    onChange={handleChange}
+                                                                    variant='outlined'
+                                                                    placeholder='Enter instagram link of your project'
+                                                                    className='input-fields'
+                                                                    validators={['required']}
+                                                                    errorMessages={['Optional']}
+                                                                />
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 pl-md-0">
                                                         <div class=" mt-5 w-100">
-                                                            <button className="btn-haed w-100">Submit</button>
+                                                            <button type="submit" className="btn-haed w-100" onClick={addnft}>Submit</button>
                                                         </div>
                                                     </div>
                                                 </div>
