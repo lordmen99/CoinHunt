@@ -1,9 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './tables.scss';
 import { useSelector } from 'react-redux'
+import axios from 'axios';
+import { API_URL } from '../../utils/ApiURL';
 const Coins = () => {
     const lightMode = useSelector((state) => state.themereducer.lightMode)
+    const [allcoin, setallcoin] = useState([]);
+    const allcoincollection = () => {
+        axios.post(`${API_URL}/v1/Coin/getAllCoins`)
+            .then((response) => {
+                setallcoin(response.data.data)
+            })
+    }
+    // console.log("all nft data", allnft)
+    useEffect(() => {
+        allcoincollection()
+    }, [])
+
+    const AllCOIN = allcoin.map((elem) => {
+        return (
+            <>
+                <tr>
+                    <td>
+                        <div className="images-outer">
+                            <img src={elem.imageUrl} alt="" className="img-fluid" />
+                            <div className="textss">
+                                <h4>{elem.name}</h4>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <Link to="" className="cnc">{elem.websiteLink}</Link>
+                    </td>
+                    <td>
+                        <p className="jhjf">APPROVED</p>
+                    </td>
+                    <td>
+                    <Link to={'/SingleCoinDetail/' + elem._id } ><button className="bvhjr">
+                            Detail
+                        </button>
+                        </Link>
+                    </td>
+                </tr>
+            </>
+        )
+
+    })
     return (
         <>
             <div className={lightMode ? "" : "light"}>
@@ -25,134 +68,15 @@ const Coins = () => {
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">NFTS NAME</th>
-                                                    <th scope="col">PRICE</th>
-                                                    <th scope="col">CHAIN</th>
+                                                    <th scope="col">COIN NAME</th>
+                                                    <th scope="col">WEBSITE</th>
+                                                    {/* <th scope="col">CHAIN</th> */}
                                                     <th scope="col">STATUS</th>
                                                     <th scope="col">DETAILS</th>
                                                 </tr>
                                             </thead>
                                             <tbody className="sndsj">
-                                                <tr>
-                                                    <td>
-                                                        <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\coindetail-1.svg" alt="" className="img-fluid" />
-                                                            <div className="textss">
-                                                                <h4>SkullApe</h4>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <Link className="cnc">0.1 BNB</Link>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhj">BSC</p>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhjf">APPROVED</p>
-                                                    </td>
-                                                    <td>
-                                                         <button className="bvhjr">
-                                                            Detail
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\coindetail-2.svg" alt="" className="img-fluid" />
-                                                            <div className="textss">
-                                                                <h4>Mutant</h4>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <Link className="cnc">0.1 BNB</Link>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhj">BSC</p>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhjf">APPROVED</p>
-                                                    </td>
-                                                    <td>
-                                                         <button className="bvhjr">
-                                                            Detail
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\coindetail-3.svg" alt="" className="img-fluid" />
-                                                            <div className="textss">
-                                                                <h4>Sant</h4>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <Link className="cnc">0.1 BNB</Link>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhj">BSC</p>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhjf">APPROVED</p>
-                                                    </td>
-                                                    <td>
-                                                        <button className="bvhjr">
-                                                            Detail
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\coindetail-4.svg" alt="" className="img-fluid" />
-                                                            <div className="textss">
-                                                                <h4>Royal Horse</h4>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <Link className="cnc">0.1 BNB</Link>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhj">BSC</p>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhjf">APPROVED</p>
-                                                    </td>
-                                                    <td>
-                                                         <button className="bvhjr">
-                                                            Detail
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div className="images-outer">
-                                                            <img src="\coinhunt\Web - Light\coindetail-1.svg" alt="" className="img-fluid" />
-                                                            <div className="textss">
-                                                                <h4>SkullApe</h4>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <Link className="cnc">0.1 BNB</Link>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhj">BSC</p>
-                                                    </td>
-                                                    <td>
-                                                        <p className="jhjf">APPROVED</p>
-                                                    </td>
-                                                    <td>
-                                                         <button className="bvhjr">
-                                                            Detail
-                                                        </button>
-                                                    </td>
-                                                </tr>
+                                                {AllCOIN}
                                             </tbody>
                                         </table>
                                     </div>

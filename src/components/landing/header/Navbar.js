@@ -131,7 +131,6 @@ const Navbar = () => {
                                                                 Sign in
                                                             </button>
                                                         }
-
                                                     </div>
                                                 </li>
                                                 <li className="list-inline-item">
