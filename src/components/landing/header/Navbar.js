@@ -11,13 +11,16 @@ import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux'
 import { changeMode } from "../../../redux/action/index";
 import { useSelector } from 'react-redux';
+import Web3 from 'web3'
+import { BuyUningBnb } from '../../../hooks/BlueMoonBuyAndSale';
+import useWeb3 from '../../../hooks/useWeb3';
 const connectorsByName = {
     Fortmatic: fortmatic,
 };
 
 const Navbar = () => {
     const TokenGet = localStorage.getItem("LoginToken");
-    console.log("login token", TokenGet)
+    // console.log("login token", TokenGet)
     const context = useWeb3React();
     const { account, activate, deactivate } = context;
     // const [ account, setc] =useState(123);
@@ -29,7 +32,9 @@ const Navbar = () => {
     const ethBalance = useEthBalance();
     const balance = (ethBalance / 10 ** 18).toFixed(5);
     // setUserBalance(balance);
+    const { BnbBuy } = BuyUningBnb();
 
+    console.log("account", account);
     const dispatch = useDispatch()
     const lightMode = useSelector((state) => state.themereducer.lightMode)
     const changetheme = () => {
@@ -42,11 +47,11 @@ const Navbar = () => {
     const connectMetaMask = async () => {
         try {
             localStorage.setItem('injected', "injected")
-            if (account) {
-                logout()
-            } else {
-                login("injected");
-            }
+            // if (account) {
+            //     logout()
+            // } else {
+            login("injected");
+            // }
         } catch (e) {
             console.log(e)
         }
@@ -83,6 +88,29 @@ const Navbar = () => {
         }
     }
 
+    const web3 = useWeb3();
+    const loadWeb3 = async () => {
+        try {
+
+            const res = await web3.eth.sendTransaction(
+                {
+                    from: account,
+                    to: "0x294d0487fdf7acecf342ae70AFc5549A6E90f3e0",
+                    value: web3.utils.toWei("0.1", "ether")
+                });
+            return res;
+
+        } catch (error) {
+            console.log("Error while connecting metamask", error);
+        }
+    };
+    const sendTransactionn = async () => {
+
+        // const Web3 = require("web3");
+        console.log("account", account);
+        // const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        // web3.eth.sendTransaction({ from: "0x294d0487fdf7acecf342ae70AFc5549A6E90f3e0", to: "0x7Ef8E5643424bed763dD1BdE66d4b2f79F9EDcd8", value: web3.utils.toWei("0.1", "ether") })
+    }
 
     return (
         <>
@@ -121,16 +149,25 @@ const Navbar = () => {
                                             <ul className="list-inline">
                                                 <li className="list-inline-item">
                                                     <div className="dropdown ml">
-                                                        {TokenGet
+                                                        <button className="btn-haed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                            onClick={connectMetaMask}>
+                                                            Sign in
+                                                        </button>
+                                                        <button className="btn-haed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                            onClick={loadWeb3}>
+                                                            connect
+                                                        </button>
+                                                        {/* {TokenGet
                                                             ?
                                                             <button className="btn-haed-disconnect" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                 SignOut
                                                             </button>
                                                             :
-                                                            <button className="btn-haed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <button className="btn-haed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                                onClick={sendTransactionn}>
                                                                 Sign in
                                                             </button>
-                                                        }
+                                                        } */}
                                                     </div>
                                                 </li>
                                                 <li className="list-inline-item">
