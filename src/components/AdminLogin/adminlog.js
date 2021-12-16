@@ -5,6 +5,16 @@ import { useSelector } from 'react-redux'
 import { GoogleLogin, GoogleLogout } from 'react-google-login'
 import axios from 'axios';
 import { API_URL } from '../../utils/ApiURL';
+import {
+    Paper,
+    Box,
+    Grid,
+    TextField,
+    Typography,
+    FormControlLabel,
+    Checkbox,
+    Button
+} from '@material-ui/core';
 const AdminLogin = () => {
     const lightMode = useSelector((state) => state.themereducer.lightMode)
     const history = useHistory();
@@ -22,23 +32,23 @@ const AdminLogin = () => {
     }
     const addUser = async (googleId, name, imageUrl, email) => {
         const res = await axios.post(`${API_URL}/v1/auth/register`, { username: name, picture: imageUrl, email: email, userId: googleId })
-        .then((res) =>{
-            const  Token = res.data.token.accessToken
-            localStorage.setItem('LoginToken', Token)
-            history.push("/");
-            // console.log("ressbkjbkjwdjwnksn", res)
-        })
-        .catch(async(e)=>{
-            const res = await axios.post(`${API_URL}/v1/auth/login`, {email: email})
-            .then((res) =>{
-               const  Token = res.data.token.accessToken
-               localStorage.setItem('LoginToken', Token)
+            .then((res) => {
+                const Token = res.data.token.accessToken
+                localStorage.setItem('LoginToken', Token)
                 history.push("/");
-                console.log("ressbkjbkjwdjwnksn", res)
+                // console.log("ressbkjbkjwdjwnksn", res)
             })
-            // history.push("/");
-        // console.log("res", res)
-        });
+            .catch(async (e) => {
+                const res = await axios.post(`${API_URL}/v1/auth/login`, { email: email })
+                    .then((res) => {
+                        const Token = res.data.token.accessToken
+                        localStorage.setItem('LoginToken', Token)
+                        history.push("/");
+                        console.log("ressbkjbkjwdjwnksn", res)
+                    })
+                // history.push("/");
+                // console.log("res", res)
+            });
         // console.log("vakue unsjshds",res)
     }
 
@@ -54,7 +64,7 @@ const AdminLogin = () => {
                     <div className="row">
                         <div className="col-sm-11 m-auto">
                             <div className="home-upper-line">
-                                <h3>Home / <span>Login</span></h3>
+                                <h3>Admin / <span>Login</span></h3>
                             </div>
                         </div>
                     </div>
@@ -62,24 +72,14 @@ const AdminLogin = () => {
                 <section className="Loginns">
                     <div className="container-fluid p-0">
                         <div className="row">
-                            <div className="col-sm-11 m-auto">
+                            <div className="col-sm-4"></div>
+                            <div className="col-sm-4 m-auto">
                                 <div className="login-inner">
-                                    <div className="xnj">
-                                        <h3> Login to vote and <br></br> add coins</h3>
-                                    </div>
-                                    <div className="facdegv">
-                                        <GoogleLogin
-                                            clientId={clientId}
-                                            className="sjhchx"
-                                            buttonText="Login with google"
-                                            onSuccess={loginSuccess}
-                                            onFailure={failure}
-                                            cookiePolicy={'single_host_origin'}
-                                        />
-                                        <button className="mb-0"><img src="\coinhunt\Web - Light\twitter13.svg" alt="" className="img-fluid" /> Sign in with Twitter</button>
-                                    </div>
+                                        <h2>Login</h2>
+                                 
                                 </div>
                             </div>
+                            <div className="col-sm-4"></div>
                         </div>
                     </div>
                 </section>
