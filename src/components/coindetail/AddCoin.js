@@ -5,10 +5,87 @@ import { useSelector } from 'react-redux'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import pic from '../../Assets/our-team-background.png'
 import { useState } from 'react';
+import twiter from '../../Assets/telegram 1.svg'
 import axios from 'axios';
+import { useWeb3React } from '@web3-react/core'
+import useAuth from '../../hooks/useAuth';
+import { fortmatic } from '../../utils/web3React';
+import Signature from '../../SignMessage/Signature';
+import { toast } from 'react-toastify';
+import useEthBalance from '../../hooks/dataFetcher';
+import { useHistory } from 'react-router';
+import Web3 from 'web3'
+import { BuyUningBnb } from '../../hooks/BlueMoonBuyAndSale';
+import useWeb3 from '../../hooks/useWeb3';
 import { API_URL } from '../../utils/ApiURL';
 
 const AddCoin = () => {
+
+     // connect wallet
+
+     const context = useWeb3React();
+     const { account, activate, deactivate } = context;
+     // const [ account, setc] =useState(123);
+     // const [username, setUserName] = useState("Your Account");
+     // const [userbalance, setUserBalance] = useState("0");
+     // const balance = (ethBalance / 10 ** 18).toFixed(5);
+     // setUserBalance(balance);
+     // const ethBalance = useEthBalance();
+     // const history = useHistory();
+    
+     const { login, logout } = useAuth();
+     const { BnbBuy } = BuyUningBnb();
+     const connectMetaMask = async () => {
+         try {
+             localStorage.setItem('injected', "injected")
+             if (account) {
+                 logout()
+             } else {
+                 login("injected");
+             }
+         } catch (e) {
+             console.log(e)
+         }
+          console.log("your account addres",account)
+     }
+    
+     // console.log("account", account);
+     // const walletConnect = async () => {
+     //     localStorage.setItem('walletconnect', "walletconnect")
+     //     if (account) {
+     //         logout()
+     //     } else {
+     //         login("walletconnect");
+     //     }
+     // }
+     // const FormaticWallet = () => {
+     //     localStorage.setItem('formatic', "formatic")
+     //     if (account) {
+     //         logout()
+     //     } else {
+     //         activate(connectorsByName.Fortmatic)
+     //     }
+     // }
+     const web3 = useWeb3();
+     const loadWeb3 = async () => {
+         try {
+ 
+             const res = await web3.eth.sendTransaction(
+                 {
+                     from: account,
+                     to: "0x294d0487fdf7acecf342ae70AFc5549A6E90f3e0",
+                     value: web3.utils.toWei("0.1", "")
+                 });
+             return res;
+ 
+         } catch (error) {
+             console.log("Error while connecting metamask", error);
+         }
+     };
+ 
+     // connect wallet end
+ 
+
     const [photo, setPhoto] = useState();
     const [uploadImage, updateuploadImage] = useState("");
     const [allFormData, setAllFormData] = useState({
@@ -32,7 +109,7 @@ const AddCoin = () => {
             console.log(e)
         }
     }
-    console.log("all form data", allFormData)
+    
 
     const addcoin = (async () => {
         // event.preventDefault()
@@ -56,16 +133,16 @@ const AddCoin = () => {
         data.append("ethContractAddress", allFormData.formData.Etheremcontract)
         data.append("solanaContractAddress", allFormData.formData.Solanacontract)
         console.log("data add for nft", data)
-        axios.post(`${API_URL}/v1/Coin/addCoin`, data,{ headers: { 'Content-Type': 'multipart/form-data' } })
+        axios.post(`${API_URL}/v1/Coin/addCoin`, data, { headers: { 'Content-Type': 'multipart/form-data' } })
             .then((response) => {
                 console.log("success response", response)
             }).catch((err) => {
                 console.log("error responce", err)
             })
     })
-  
+
     const lightMode = useSelector((state) => state.themereducer.lightMode)
-    
+
     // const addcoin = ÷
     return (
         <>
@@ -127,7 +204,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-12 p-md-0">
-                                                    <div className='form-group shsjsjsx'>
+                                                        <div className='form-group shsjsjsx'>
                                                             <label For='name'>Description</label>
                                                             <TextValidator
                                                                 fullWidth
@@ -147,7 +224,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-12 pl-md-0 mb-4">
-                                                    <div className='form-group'>
+                                                        <div className='form-group'>
                                                             <label For='name'>Upload Logo (500X500 pixels)</label>
                                                             <div className='upload-div'>
                                                                 <label className='upload-btn' for='files'> <img src="\coinhunt\Web - Light\cloud-image.svg" alt="" className="img-fluid overlay" /></label>
@@ -209,7 +286,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-12 p-0">
-                                                    <div className='form-group'>
+                                                        <div className='form-group'>
                                                             <label For='name'>Launch date</label>
                                                             <TextValidator
                                                                 fullWidth
@@ -369,6 +446,81 @@ const AddCoin = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    {/* payments */}
+
+                                    <div className="AddNft-forms AddNft-forms1">
+                                        <div className="row p-0">
+                                            <div className="col-md-8 p-0 mr-auto">
+                                                <div className="row p-md-0">
+                                                    <div className="col-12 p-md-0">
+                                                        <h5 className="askd">Payments</h5>
+                                                        <p className="aha">To Add NFT You have to paye 1 BNB and for promoting 0.5 BNB</p>
+                                                    </div>
+                                                </div>
+                                                <div className="row p-md-0">
+                                                    <div className="Form-payements">
+                                                        <div className="listingf">
+                                                            <div className="left">
+                                                                <p>Listing Fee</p>
+                                                            </div>
+                                                            <div className="right">
+                                                                <p>1 BNB</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="Promotedtfee">
+                                                            <div className="left">
+                                                                <p>Promoted Fee</p>
+                                                            </div>
+                                                            <div className="right">
+                                                                <p>0.5 BNB</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="Discouts">
+                                                            <div className="left">
+                                                                <p>Discout</p>
+                                                            </div>
+                                                            <div className="right">
+                                                                <p>0.5 BNB</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="Totsalfee">
+                                                            <div className="left">
+                                                                <p>Total</p>
+                                                            </div>
+                                                            <div className="right">
+                                                                <p>1.5 BNB</p>
+                                                            </div>
+                                                        </div>
+                                                        {
+                                                            account ?
+                                                            <div className="aksdad">
+                                                            <button type="button">Paye Ammount</button>
+                                                        </div>
+                                                        :
+                                                        ''
+                                                        }
+                                                      
+                                                        <div className="connect-button">
+                                                            {
+                                                                account ?
+                                                                    <div className="aksna">
+                                                                        <p>Wallet Connect<i class="fas fa-check-circle ml-2"></i></p>
+                                                                         <button type="button " className="buttonss" onClick={connectMetaMask}>Disconnect Wallet</button>
+                                                                    </div>
+                                                                    :
+                                                                    <div className="aksna">
+                                                                        <p>Connect wallet to proceed</p>
+                                                                        <button type="button" onClick={connectMetaMask}>Connect Wallet</button>
+                                                                    </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* </ValidatorForm> */}
                                     <div className="AddCoin-forms AddCoin-forms1">
                                         <div className="row p-md-0">
                                             <div className="col-md-8 p-md-0 mr-auto">

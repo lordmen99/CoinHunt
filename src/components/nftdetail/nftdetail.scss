@@ -327,20 +327,191 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 }
 .AddNft-forms {
+    .askd{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 28px;
+        color: #fff;
+        padding-bottom: 16px;
+    }
+    .aha{
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        color: #fff;
+        padding-bottom: 20px;
+    }
     .Form-payements{
         background: #2F3955;
         border-radius: 9px;
-        min-width: 250px;
+        min-width: 300px;
         padding: 20px;
         .listingf{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid rgb(19, 18, 18);
+            padding-bottom: 5px;
+            margin-bottom: 5px;
             .left{
-               
+               p{
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                color: #FFFFFF;
+               }
             }
             .right{
-            
+                p{
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        .Promotedtfee{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgb(19, 18, 18);
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            .left{
+               p{
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                color: #FFFFFF;
+               }
+            }
+            .right{
+                p{
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        .Discouts{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgb(19, 18, 18);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            .left{
+               p{
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                color: #FFFFFF;
+               }
+            }
+            .right{
+                p{
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        .Totsalfee{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left{
+               p{
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+                color: #FFFFFF;
+               }
+            }
+            .right{
+                p{
+                    font-family: Poppins;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    .connect-button{
+        text-align: center;
+        p{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 28px;
+            color: #FFFFFF;
+            padding-bottom: 10px;
+            padding-top: 20px;
+            i{
+                color: #3BD889;
+            }
+        }
+        button{
+            background: #4F46E5;
+            border-radius: 14px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            width: 100%;
+            border: none;
+            height: 64px;
+            color: #fff;
+            border: 1px solid #4F46E5;
+            &:hover{
+                border: 1px solid #4F46E5;
+                color: #4F46E5;
+                background-color: transparent;
+            }
+        }
+        .buttonss{
+            background: #F64A4A;
+            border-radius: 14px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            width: 100%;
+            border: none;
+            height: 64px;
+            color: #fff;
+            border: 1px solid #F64A4A;
+            &:hover{
+                border: 1px solid #F64A4A;
+                color: #F64A4A;
+                background-color: transparent;
             }
         }
     }

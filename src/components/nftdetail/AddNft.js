@@ -7,6 +7,16 @@ import pic from '../../Assets/our-team-background.png'
 import { useState } from 'react';
 import twiter from '../../Assets/telegram 1.svg'
 import axios from 'axios';
+import { useWeb3React } from '@web3-react/core'
+import useAuth from '../../hooks/useAuth';
+import { fortmatic } from '../../utils/web3React';
+import Signature from '../../SignMessage/Signature';
+import { toast } from 'react-toastify';
+import useEthBalance from '../../hooks/dataFetcher';
+import { useHistory } from 'react-router';
+import Web3 from 'web3'
+import { BuyUningBnb } from '../../hooks/BlueMoonBuyAndSale';
+import useWeb3 from '../../hooks/useWeb3';
 import { API_URL } from '../../utils/ApiURL';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -22,6 +32,71 @@ import {
     Button
 } from '@material-ui/core';
 const AddNft = () => {
+
+    // connect wallet
+
+    const context = useWeb3React();
+    const { account, activate, deactivate } = context;
+    // const [ account, setc] =useState(123);
+    // const [username, setUserName] = useState("Your Account");
+    // const [userbalance, setUserBalance] = useState("0");
+    // const balance = (ethBalance / 10 ** 18).toFixed(5);
+    // setUserBalance(balance);
+    // const ethBalance = useEthBalance();
+    // const history = useHistory();
+   
+    const { login, logout } = useAuth();
+    const { BnbBuy } = BuyUningBnb();
+    const connectMetaMask = async () => {
+        try {
+            localStorage.setItem('injected', "injected")
+            if (account) {
+                logout()
+            } else {
+                login("injected");
+            }
+        } catch (e) {
+            console.log(e)
+        }
+         console.log("your account addres",account)
+    }
+   
+    // console.log("account", account);
+    // const walletConnect = async () => {
+    //     localStorage.setItem('walletconnect', "walletconnect")
+    //     if (account) {
+    //         logout()
+    //     } else {
+    //         login("walletconnect");
+    //     }
+    // }
+    // const FormaticWallet = () => {
+    //     localStorage.setItem('formatic', "formatic")
+    //     if (account) {
+    //         logout()
+    //     } else {
+    //         activate(connectorsByName.Fortmatic)
+    //     }
+    // }
+    const web3 = useWeb3();
+    const loadWeb3 = async () => {
+        try {
+
+            const res = await web3.eth.sendTransaction(
+                {
+                    from: account,
+                    to: "0x294d0487fdf7acecf342ae70AFc5549A6E90f3e0",
+                    value: web3.utils.toWei("0.1", "")
+                });
+            return res;
+
+        } catch (error) {
+            console.log("Error while connecting metamask", error);
+        }
+    };
+
+    // connect wallet end
+
     const validationSchema = Yup.object().shape({
         // fullname: Yup.string().required('Fullname is required'),
         name: Yup.string()
@@ -285,7 +360,6 @@ const AddNft = () => {
                                                                     <img src={uploadImage} alt="" className="img-fluid  imoo" />
                                                                 )}
                                                             </div>
-
                                                             <TextField
                                                                 fullWidth
                                                                 type='file'
@@ -518,71 +592,75 @@ const AddNft = () => {
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    {/* payments */}
 
-                                                    <div className="col-md-6 pl-md-0">
-                                                        <div className=" mt-5 w-100">
-                                                            <button type="submit" className="btn-haed w-100" onClick={handleSubmit(onSubmit)}>Submit</button>
+                                                    <div className="AddNft-forms AddNft-forms1">
+                                                        <div className="row p-0">
+                                                            <div className="col-md-8 p-0 mr-auto">
+                                                                <div className="row p-md-0">
+                                                                    <div className="col-12 p-md-0">
+                                                                        <h5 className="askd">Payments</h5>
+                                                                        <p className="aha">To Add NFT You have to paye 1 BNB and for promoting 0.5 BNB</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="row p-md-0">
+                                                                    <div className="Form-payements">
+                                                                        <div className="listingf">
+                                                                            <div className="left">
+                                                                                <p>Listing Fee</p>
+                                                                            </div>
+                                                                            <div className="right">
+                                                                                <p>1 BNB</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className="Promotedtfee">
+                                                                            <div className="left">
+                                                                                <p>Promoted Fee</p>
+                                                                            </div>
+                                                                            <div className="right">
+                                                                                <p>0.5 BNB</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className="Discouts">
+                                                                            <div className="left">
+                                                                                <p>Discout</p>
+                                                                            </div>
+                                                                            <div className="right">
+                                                                                <p>0.5 BNB</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className="Totsalfee">
+                                                                            <div className="left">
+                                                                                <p>Total</p>
+                                                                            </div>
+                                                                            <div className="right">
+                                                                                <p>1.5 BNB</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className="connect-button">
+                                                                            <p>Connect wallet to proceed</p>
+                                                                            {
+                                                                                account ?
+                                                                                <button type="button " className="buttonss" onClick={connectMetaMask}>Disconnect Wallet</button>
+                                                                                :
+                                                                                <button type="button"  onClick={connectMetaMask}>Connect Wallet</button>
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-
+                                                    {/* </ValidatorForm> */}
+                                                </div>
+                                                <div className="col-md-6 pl-md-0">
+                                                    <div className=" mt-5 w-100">
+                                                        <button type="submit" className="btn-haed w-100" onClick={handleSubmit(onSubmit)}>Submit</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* payments */}
-
-                                    <div className="AddNft-forms AddNft-forms1">
-                                        <div className="row p-0">
-                                            <div className="col-md-8 p-0 mr-auto">
-                                                <div className="row p-md-0">
-                                                    <div className="col-12 p-md-0">
-                                                        <h6>Payments</h6>
-                                                        <p>To Add NFT You have to paye 1 BNB and for promoting 0.5 BNB</p>
-                                                    </div>
-                                                </div>
-                                                <div className="row p-md-0">
-                                                    <div className="Form-payements">
-                                                        <div className="listingf">
-                                                            <div className="left">
-                                                                <p>Listing Fee</p>
-                                                            </div>
-                                                            <div className="right">
-                                                                <p>1 BNB</p>
-                                                            </div>
-                                                        </div>
-                                                        <div className="Promotedtfee">
-                                                            <div className="left">
-                                                                <p>Promoted Fee</p>
-                                                            </div>
-                                                            <div className="right">
-                                                                <p>0.5 BNB</p>
-                                                            </div>
-                                                        </div>
-                                                        <div className="Discouts">
-                                                            <div className="left">
-                                                                <p>Discout</p>
-                                                            </div>
-                                                            <div className="right">
-                                                                <p>0.5 BNB</p>
-                                                            </div>
-                                                        </div>
-                                                        <div className="Totsalfee">
-                                                            <div className="left">
-                                                                <p>Total</p>
-                                                            </div>
-                                                            <div className="right">
-                                                                <p>1.5 BNB</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* </ValidatorForm> */}
-                                    
                                 </div>
                             </div>
                         </div>
