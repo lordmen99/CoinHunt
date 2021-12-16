@@ -34,7 +34,7 @@ const Navbar = () => {
     // setUserBalance(balance);
     const { BnbBuy } = BuyUningBnb();
 
-    console.log("account", account);
+    // console.log("account metamask", account);
     const dispatch = useDispatch()
     const lightMode = useSelector((state) => state.themereducer.lightMode)
     const changetheme = () => {
@@ -47,11 +47,11 @@ const Navbar = () => {
     const connectMetaMask = async () => {
         try {
             localStorage.setItem('injected', "injected")
-            // if (account) {
-            //     logout()
-            // } else {
+            if (account) {
+                logout()
+            } else {
             login("injected");
-            // }
+            }
         } catch (e) {
             console.log(e)
         }
@@ -88,26 +88,32 @@ const Navbar = () => {
         }
     }
 
-    const web3 = useWeb3();
-    const loadWeb3 = async () => {
-        try {
+    // const web3 = useWeb3();
+    // const loadWeb3 = async () => {
+    //     try {
 
-            const res = await web3.eth.sendTransaction(
-                {
-                    from: account,
-                    to: "0x294d0487fdf7acecf342ae70AFc5549A6E90f3e0",
-                    value: web3.utils.toWei("0.1", "ether")
-                });
-            return res;
+    //         const res = await web3.eth.sendTransaction(
+    //             {
+    //                 from: account,
+    //                 to: "0x294d0487fdf7acecf342ae70AFc5549A6E90f3e0",
+    //                 value: web3.utils.toWei("0.1", "")
+    //             });
+    //         return res;
 
-        } catch (error) {
-            console.log("Error while connecting metamask", error);
-        }
-    };
+    //     } catch (error) {
+    //         console.log("Error while connecting metamask", error);
+    //     }
+    // };
+    const Signout = () => {
+        console.log("signout from app")
+        localStorage.clear()
+        history.push("/login")
+      
+    }
     const sendTransactionn = async () => {
 
         // const Web3 = require("web3");
-        console.log("account", account);
+        // console.log("account", account);
         // const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
         // web3.eth.sendTransaction({ from: "0x294d0487fdf7acecf342ae70AFc5549A6E90f3e0", to: "0x7Ef8E5643424bed763dD1BdE66d4b2f79F9EDcd8", value: web3.utils.toWei("0.1", "ether") })
     }
@@ -149,14 +155,14 @@ const Navbar = () => {
                                             <ul className="list-inline">
                                                 <li className="list-inline-item">
                                                     <div className="dropdown ml">
-                                                        <button className="btn-haed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                                        {/* <button className="btn-haed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                                             onClick={connectMetaMask}>
                                                             Sign in
                                                         </button>
                                                         <button className="btn-haed" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                                            onClick={loadWeb3}>
+                                                            >
                                                             connect
-                                                        </button>
+                                                        </button> */}
                                                         {/* {TokenGet
                                                             ?
                                                             <button className="btn-haed-disconnect" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -168,9 +174,20 @@ const Navbar = () => {
                                                                 Sign in
                                                             </button>
                                                         } */}
+                                                        {TokenGet
+                                                            ?
+                                                            <button type="button" className="btn-haed-disconnect" onClick={Signout}>
+                                                                SignOut
+                                                            </button>
+                                                            :
+                                                            <button type="button" className="btn-haed" 
+                                                                >
+                                                                Sign in
+                                                            </button>
+                                                        }
                                                     </div>
                                                 </li>
-                                                <li className="list-inline-item">
+                                                {/* <li className="list-inline-item">
                                                     <button type="button" className=" img-bhu" onClick={changetheme}>
                                                         {lightMode
                                                             ?
@@ -179,7 +196,7 @@ const Navbar = () => {
                                                             <img src="\coinhunt\Web - Light\Web - Light\Frame 4.svg" alt="" className="img-fluid " />
                                                         }
                                                     </button>
-                                                </li>
+                                                </li> */}
                                             </ul>
                                         </form>
                                     </div>

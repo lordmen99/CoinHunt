@@ -56,27 +56,27 @@ function SingleCoinDetail() {
                                             <ValidatorForm className="form-contact">
                                                 <div className="row p-md-0">
                                                     <div className="col-6 p-md-0">
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div className="form-group main-text-feild-head">
                                                             <label For="name">Name<i className="text-danger">*</i></label>
                                                             <p>{singlecoin.name}</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-6">
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div className="form-group main-text-feild-head">
                                                             <label For="name">Symbol<i className="text-danger">*</i></label>
                                                             <p>{singlecoin.symbol}</p>
                                                         </div>
                                                     </div>
                                                     <div className="AddCoin-forms AddCoin-forms3">
                                                         <div className="col-12 pl-md-0">
-                                                            <div class='form-group main-text-feild-head2'>
+                                                            <div className='form-group main-text-feild-head2'>
                                                                 <label For='name'>Description</label>
                                                                 <p>{singlecoin.description} </p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div className="col-12 pl-md-0 mb-4">
-                                                        <div class='form-group'>
+                                                        <div className='form-group'>
                                                             <label For='name'>Upload Logo (500X500 pixels)<i className="text-danger">*</i></label>
                                                             <div className='upload-div upload-div2 sdhcsnc'>
                                                                 <img src={singlecoin.imageUrl} alt="" className="img-fluid imoo" />
@@ -86,21 +86,21 @@ function SingleCoinDetail() {
                                                     <div className="col-6 p-md-0">
 
 
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div className="form-group main-text-feild-head">
                                                             <label For="name">Price</label>
                                                             <p>{singlecoin.price}</p>
                                                         </div>
 
                                                     </div>
                                                     <div className="col-6">
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div className="form-group main-text-feild-head">
                                                             <label For="name">Market cap</label>
                                                             <p>{singlecoin.marketCap}</p>
                                                         </div>
                                                     </div>
                                                     <div className="AddCoin-forms AddCoin-forms1">
                                                         <div className="col-12 pl-md-0">
-                                                            <div class='form-group main-text-feild-head'>
+                                                            <div className='form-group main-text-feild-head'>
                                                                 <label For='name'>Launch date<i className="text-danger">*</i></label>
                                                                 <p>{singlecoin.time}</p>
                                                             </div>
@@ -126,20 +126,20 @@ function SingleCoinDetail() {
                                                     <div className="col-6 p-md-0">
 
 
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div className="form-group main-text-feild-head">
                                                             <label For="name">Website Link</label>
                                                             <p className='text-truncate'>{singlecoin.websiteLink}</p>
                                                         </div>
 
                                                     </div>
                                                     <div className="col-6">
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div className="form-group main-text-feild-head">
                                                             <label For="name">Twitter Link</label>
                                                             <p className='text-truncate'>{singlecoin.twitterLink}</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 p-md-0">
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div className="form-group main-text-feild-head">
                                                             <label For="name">Telegram Link</label>
                                                             <p className='text-truncate'>{singlecoin.telegramLink}</p>
                                                         </div>
@@ -162,7 +162,7 @@ function SingleCoinDetail() {
                                                     <div className="col-md-6 p-md-0">
 
 
-                                                        <div class="form-group main-text-feild-head3">
+                                                        <div className="form-group main-text-feild-head3">
                                                             <label For="name">Binance Smart Chain</label>
                                                             <p className='text-truncate'>{singlecoin.bscContractAddress}</p>
                                                         </div>
@@ -170,19 +170,19 @@ function SingleCoinDetail() {
                                                     </div>
 
                                                     <div className="col-md-6">
-                                                        <div class="form-group main-text-feild-head3">
+                                                        <div className="form-group main-text-feild-head3">
                                                             <label For="name">Ethereum</label>
                                                             <p className='text-truncate'>{singlecoin.ethContractAddress}</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 mt-4 p-md-0">
-                                                        <div class="form-group main-text-feild-head3">
+                                                        <div className="form-group main-text-feild-head3">
                                                             <label For="name">Polygon</label>
                                                             <p className='text-truncate'>{singlecoin.polygonContractAddress}</p>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 mt-4">
-                                                        <div class="form-group main-text-feild-head3">
+                                                        <div className="form-group main-text-feild-head3">
                                                             <label For="name">Solana</label>
                                                             <p className='text-truncate'>{singlecoin.solanaContractAddress}</p>
                                                         </div>
@@ -200,7 +200,7 @@ function SingleCoinDetail() {
                                                     <label For="name">Listing requirement</label>
                                                     <div className="col-md-12">
 
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div className="form-group main-text-feild-head">
                                                             {/* <label For="name">Listing requirement</label> */}
                                                             <ul className="pl-md-0 pl-3 ">
                                                                 <li>Valid contract adress</li>
@@ -216,12 +216,12 @@ function SingleCoinDetail() {
                                                         <div className="AddCoin-forms AddCoin-forms1">
                                                             <div className="row p-0">
                                                                 <div className="col-md-6 pl-md-0 pr-md-2">
-                                                                    <div class=" w-100">
+                                                                    <div className=" w-100">
                                                                         <button className="btn-haed w-100">Approve</button>
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-md-6 pr-md-0 mt-md-0 mt-3 pl-md-2">
-                                                                    <div class=" w-100">
+                                                                    <div className=" w-100">
                                                                         <button className="btn-haed-disconnect w-100">Reject</button>
                                                                     </div>
                                                                 </div>

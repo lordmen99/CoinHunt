@@ -67,7 +67,7 @@ const NFt = () => {
                         <div className="row">
                             <div className="col-sm-11 m-auto">
                                 <div className="down-nfts">
-                                    <div class="table-responsive">
+                                    <div className="table-responsive">
                                         <table class="table">
                                             <thead>
                                                 <tr>

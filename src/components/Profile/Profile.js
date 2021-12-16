@@ -67,20 +67,20 @@ const Profile = () => {
                             <div className="row">
                                 <div className="col-sm-11 m-auto">
                                     <div className="upper-optionss">
-                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Upvoted coins</a>
+                                        <ul className="nav nav-tabs" id="myTab" role="tablist">
+                                            <li className="nav-item" role="presentation">
+                                                <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Upvoted coins</a>
                                             </li>
-                                            <li class="nav-item" role="presentation">
-                                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upvoted NFTs</a>
+                                            <li className="nav-item" role="presentation">
+                                                <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upvoted NFTs</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div className="tab-content" id="myTabContent">
+                            <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <div className="container-fluid p-0">
                                     <div className="row">
                                         <div className="col-sm-11 m-auto">
@@ -95,8 +95,8 @@ const Profile = () => {
                                         <div className="row">
                                             <div className="col-sm-11 m-auto">
                                                 <div className="down-nfts">
-                                                    <div class="table-responsive">
-                                                        <table class="table">
+                                                    <div className="table-responsive">
+                                                        <table className="table">
                                                             <thead>
                                                                 <tr>
                                                                     <th scope="col">COIN</th>
@@ -261,7 +261,7 @@ const Profile = () => {
                                     </div>
                                 </section>
                             </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <div className="nfts-profiles">
                                     <div className="container-fluid p-0">
                                         <div className="row">

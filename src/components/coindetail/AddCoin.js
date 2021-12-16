@@ -97,7 +97,7 @@ const AddCoin = () => {
                                             <div className="col-md-8 p-0 mr-auto">
                                                 <div className="row p-md-0">
                                                     <div className="col-md-6 pl-md-0">
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Name</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='name'
@@ -112,7 +112,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 pr-md-0">
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Symbol</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='symbol'
@@ -127,7 +127,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-12 p-md-0">
-                                                    <div class='form-group shsjsjsx'>
+                                                    <div className='form-group shsjsjsx'>
                                                             <label For='name'>Description</label>
                                                             <TextValidator
                                                                 fullWidth
@@ -147,7 +147,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-12 pl-md-0 mb-4">
-                                                    <div class='form-group'>
+                                                    <div className='form-group'>
                                                             <label For='name'>Upload Logo (500X500 pixels)</label>
                                                             <div className='upload-div'>
                                                                 <label className='upload-btn' for='files'> <img src="\coinhunt\Web - Light\cloud-image.svg" alt="" className="img-fluid overlay" /></label>
@@ -178,7 +178,7 @@ const AddCoin = () => {
                                                     <div className="col-md-6 pl-md-0">
 
 
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Price</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='price'
@@ -194,7 +194,7 @@ const AddCoin = () => {
 
                                                     </div>
                                                     <div className="col-md-6 pr-md-0">
-                                                        <div class="form-group">
+                                                        <div className="form-group">
                                                             <label For="name">Market cap</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='marketcap'
@@ -209,7 +209,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-12 p-0">
-                                                    <div class='form-group'>
+                                                    <div className='form-group'>
                                                             <label For='name'>Launch date</label>
                                                             <TextValidator
                                                                 fullWidth
@@ -245,7 +245,7 @@ const AddCoin = () => {
                                                     <div className="col-md-6 pl-md-0">
 
 
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Website Link</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='website'
@@ -261,7 +261,7 @@ const AddCoin = () => {
 
                                                     </div>
                                                     <div className="col-md-6 pr-md-0">
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Twitter Link</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='twitterlink'
@@ -276,7 +276,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 pl-md-0">
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Telegram Link</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='telegramlink'
@@ -304,7 +304,7 @@ const AddCoin = () => {
                                                 </div>
                                                 <div className="row p-md-0">
                                                     <div className="col-md-6 pl-md-0">
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Binance Smart Chain</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='BNBContract'
@@ -321,7 +321,7 @@ const AddCoin = () => {
                                                     </div>
 
                                                     <div className="col-md-6 pr-md-0">
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Ethereum</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='Etheremcontract'
@@ -336,7 +336,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 pl-md-0">
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Polygon</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='Ploygoncontract'
@@ -351,7 +351,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 pr-md-0">
-                                                        <div class="form-group ">
+                                                        <div className="form-group ">
                                                             <label For="name">Solana</label>
                                                             <TextValidator fullWidth type='text'
                                                                 name='Solanacontract'
@@ -377,7 +377,7 @@ const AddCoin = () => {
                                                     <label For="name">Listing requirement</label>
                                                     <div className="col-md-12">
 
-                                                        <div class="form-group main-text-feild-head">
+                                                        <div className="form-group main-text-feild-head">
                                                             {/* <label For="name">Listing requirement</label> */}
                                                             <ul className='pr-md-0 pl-3'>
                                                                 <li>Valid contract adress</li>
@@ -388,7 +388,7 @@ const AddCoin = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 pl-md-0">
-                                                        <div class=" mt-4 w-100">
+                                                        <div className=" mt-4 w-100">
                                                             <button className="btn-haed w-100" onClick={addcoin}>Submit</button>
                                                         </div>
                                                     </div>

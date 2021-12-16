@@ -21,8 +21,8 @@ const Today = () => {
                         <div className="row">
                             <div className="col-sm-11 m-auto">
                                 <div className="down-nfts">
-                                    <div class="table-responsive">
-                                        <table class="table">
+                                    <div className="table-responsive">
+                                        <table className="table">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">COIN</th>

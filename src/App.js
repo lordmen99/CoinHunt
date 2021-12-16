@@ -21,6 +21,8 @@ import AddCoin from './components/coindetail/AddCoin';
 import AddNft from './components/nftdetail/AddNft';
 import SingleNft from './components/nftdetail/SingleNft';
 import BitHighCoin from './components/BitHigh/BitHighCoin';
+import AdminLogin from './components/AdminLogin/adminlog';
+import Adminregis from './components/AdminRegister/adminregis';
 
 function App() {
   useEagerConnect();
@@ -42,6 +44,10 @@ function App() {
             <Route exact path='/AllCoinDetail' component={Coins} />
             <Route exact path='/BitNFT' component={BitHighNFT} />
             <Route exact path='/BitCoin' component={BitHighCoin} />
+
+            {/* Admin Routes */}
+            <Route exact path='/Adminlogin' component={AdminLogin} />
+            <Route exact path='/AdminRegister' component={Adminregis} />
           </Switch>
           <Footer />
         </Router>

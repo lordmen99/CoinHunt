@@ -326,3 +326,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding: 10px;
     }
 }
+.AddNft-forms {
+    .Form-payements{
+        background: #2F3955;
+        border-radius: 9px;
+        min-width: 250px;
+        padding: 20px;
+        .listingf{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left{
+               
+            }
+            .right{
+            
+            }
+        }
+    }
+}
