@@ -69,14 +69,21 @@ const AdminLogin = () => {
                         </div>
                     </div>
                 </div>
-                <section className="Loginns">
+                <section className="Loginns-admin">
                     <div className="container-fluid p-0">
                         <div className="row">
-                            <div className="col-sm-4"></div>
-                            <div className="col-sm-4 m-auto">
-                                <div className="login-inner">
+                            <div className="col-md-4"></div>
+                            <div className="col-md-4 m-auto">
+                                <div className="login-inner-admin">
+                                    <div className='logintext-div'>
                                         <h2>Login</h2>
-                                 
+                                        <button className='btn-haed'>Admin</button>
+                                    </div>
+                                    <label >Username</label>
+                                    <input className='MuiOutlinedInput-input w-100' type="text" placeholder='you@example.com' />
+                                    <label >Password</label>
+                                    <input className='MuiOutlinedInput-input w-100' type="text" placeholder='Your password' />
+                                    <button className='btn-haed w-100'>Submit</button>
                                 </div>
                             </div>
                             <div className="col-sm-4"></div>

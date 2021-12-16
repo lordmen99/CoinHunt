@@ -59,27 +59,25 @@ const Adminregis = () => {
                         </div>
                     </div>
                 </div>
-                <section className="Loginns">
+                <section className="Register-admin">
                     <div className="container-fluid p-0">
                         <div className="row">
-                            <div className="col-sm-11 m-auto">
-                                <div className="login-inner">
-                                    <div className="xnj">
-                                        <h3> Login to vote and <br></br> add coins</h3>
+                            <div className="col-md-4"></div>
+                            <div className="col-md-4 m-auto">
+                                <div className="register-inner-admin">
+                                    <div className='registext-div'>
+                                        <h2>Register</h2>
                                     </div>
-                                    <div className="facdegv">
-                                        <GoogleLogin
-                                            clientId={clientId}
-                                            className="sjhchx"
-                                            buttonText="Login with google"
-                                            onSuccess={loginSuccess}
-                                            onFailure={failure}
-                                            cookiePolicy={'single_host_origin'}
-                                        />
-                                        <button className="mb-0"><img src="\coinhunt\Web - Light\twitter13.svg" alt="" className="img-fluid" /> Sign in with Twitter</button>
-                                    </div>
+                                    <label >Username</label>
+                                    <input className='MuiOutlinedInput-input w-100' type="text" placeholder='you@example.com' />
+                                    <label >Password</label>
+                                    <input className='MuiOutlinedInput-input w-100' type="text" placeholder='Your password' />
+                                    <label >Email</label>
+                                    <input className='MuiOutlinedInput-input w-100' type="email" placeholder='Your email' />
+                                    <button className='btn-haed w-100'>Submit</button>
                                 </div>
                             </div>
+                            <div className="col-sm-4"></div>
                         </div>
                     </div>
                 </section>
